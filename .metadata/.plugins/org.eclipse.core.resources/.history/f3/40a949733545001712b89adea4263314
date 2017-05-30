@@ -1,0 +1,9 @@
+package br.imd.controle;
+
+public class Atividades {
+	private int idAtividade;
+	private Device deviceUsado;
+	
+	
+
+}

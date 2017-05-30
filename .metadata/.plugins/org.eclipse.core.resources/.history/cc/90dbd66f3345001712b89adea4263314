@@ -1,0 +1,14 @@
+package br.imd.controle;
+
+import java.util.ArrayList;
+
+public class Grupo {
+	private ArrayList<String> funcaoUsuario;
+	private int idGrupo;
+	
+	public Grupo(){}
+	
+	public void permissoes(ArrayList<String> regras){
+		
+	}
+}
