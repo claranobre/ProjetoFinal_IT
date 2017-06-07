@@ -1,0 +1,7 @@
+package br.imd.controle;
+
+public class LeituraLog {
+	
+	private ArrayList<String> entrada;
+
+}

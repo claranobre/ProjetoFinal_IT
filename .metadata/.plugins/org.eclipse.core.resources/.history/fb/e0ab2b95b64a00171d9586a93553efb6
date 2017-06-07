@@ -1,0 +1,31 @@
+package br.imd.controle;
+
+import java.io.BufferedReader;
+import java.util.ArrayList;
+
+public class LeituraLog {
+	
+	private ArrayList<String> entrada;
+	private ArrayList<String> acaoUsuario;
+	
+	public static void main(String[] args){
+	
+		String csvFile = "/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/logon-sumarizado.csv";
+		BufferedReader leitor = null;
+		String line = "";
+		String csvSplitBy = ",";
+		
+		try{
+			
+			leitor = new BufferedReader(new FileReader(csvFile));
+			while((line = leitor.readLine()) != null){
+				String[] logonUsuario = line.split(csvSplitBy);
+				
+				System.out.println("Usuario: [id = " + logonUsuario[0] + "]");
+			}
+		}		
+	}	
+	public void leituraArquivo(){}
+	
+	public void respostaArquivo(){}
+}

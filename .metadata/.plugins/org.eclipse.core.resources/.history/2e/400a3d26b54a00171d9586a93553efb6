@@ -1,0 +1,15 @@
+package br.imd.controle;
+
+import java.util.ArrayList;
+
+public class LeituraLog {
+	
+	private ArrayList<String> entrada;
+	private ArrayList<String> acaoUsuario;
+	
+	public void leituraArquivo(){}
+	
+	public void respostaArquivo(){}
+	
+
+}
