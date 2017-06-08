@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 
 public class LeituraLog {
 
@@ -13,24 +15,11 @@ public class LeituraLog {
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, EMAIL = 2, DOMAIN = 3, ROLE = 4;
 
-	private ArrayList<String> entrada;
-	private ArrayList<String> acaoUsuario;
-
-	BufferedReader leitor = null;
-	String line = "";
-	String csvSplitBy = ",";
-
-	public void leituraArquivo(){
-		ArrayList<String> csvFile = new ArrayList<String>();
-		csvFile.add("/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/logon-sumarizado.csv");
-		csvFile.add("/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/http-sumarizado.csv");
-		csvFile.add("/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/ldap.csv");
-		csvFile.add("/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/device.csv");
-
+	public static void leituraArquivoLogon(String csvLogon){
+		BufferedReader leitor = null;
 		try{
-
-			this.leitor = new BufferedReader(new FileReader());
-
+			leitor = new BufferedReader(new FileReader(csvLogon));
+			respostaArquivoLogon(leitor);
 		}catch(FileNotFoundException e){
 			e.printStackTrace();
 		}catch (IOException e){
@@ -46,35 +35,120 @@ public class LeituraLog {
 		}	
 	}	
 
+	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
+		String line = "";
+		String csvSplitBy = ",";
 
-	public void respostaArquivo() throws IOException{
 		while((line = leitor.readLine()) != null){
-			String[] logonUsuario = line.split(csvSplitBy);
-			String[] deviceUsuario = line.split(csvSplitBy);
-			String[] ldapUsuario = line.split(csvSplitBy);
-			String[] httpUsuario = line.split(csvSplitBy);
-
-			System.out.println("Usuario: [id = " + logonUsuario[ID_LOGON] + "]"
-					+ " [Date: = " + logonUsuario[DATE_LOGON] + "]" + " [User = " + logonUsuario[USER_LOGON] + "]"
-					+ " [PC = " + logonUsuario[PC_LOGON] + "]" + " [Activity = "
-					+ logonUsuario[ACTIVITY_LOGON] + "]");
-
-
-			System.out.println("Usuario: [id = " + deviceUsuario[ID_DEVICE] + "]"
-					+ " [Date: = " + deviceUsuario[DATE_DEVICE] + "]" + " [User = " + deviceUsuario[USER_DEVICE] + "]"
-					+ " [PC = " + deviceUsuario[PC_DEVICE] + "]" + " [Activity = "
-					+ deviceUsuario[ACTIVITY_DEVICE] + "]");
-
-			System.out.println("Usuario: [id = " + httpUsuario[ID_HTTP] + "]"
-					+ " [Date: = " + httpUsuario[DATE_HTTP] + "]" + " [User = " + httpUsuario[USER_HTTP] + "]"
-					+ " [PC = " + httpUsuario[PC_HTTP] + "]" + " [Activity = "
-					+ httpUsuario[ACTIVITY_HTTP] + "]");
-
-			/*System.out.println("Usuario: [id = " + logonUsuario[ID_LOGON] + "]"
-					+ " [Date: = " + logonUsuario[DATE_LOGON] + "]" + " [User = " + logonUsuario[USER_LOGON] + "]"
-					+ " [PC = " + logonUsuario[PC_LOGON] + "]" + " [Activity = "
-					+ logonUsuario[ACTIVITY_LOGON] + "]");*/
+			String[] logon = line.split(csvSplitBy);
+			System.out.println("Acesso: [id = " + logon[ID_LOGON] + "]"
+					+ " [Date: = " + logon[DATE_LOGON] + "]" + " [User = " + logon[USER_LOGON] + "]"
+					+ " [PC = " + logon[PC_LOGON] + "]" + " [Activity = "
+					+ logon[ACTIVITY_LOGON] + "]");
 
 		}
+	}
+
+	public static void leituraArquivoDevice(String csvDevice){
+		BufferedReader leitor = null;
+		try{
+			leitor = new BufferedReader(new FileReader(csvDevice));
+			respostaArquivoDevice(leitor);
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch (IOException e){
+			e.printStackTrace();
+		} finally{
+			if(leitor != null){
+				try{
+					leitor.close();
+				}catch (IOException e){
+					e.printStackTrace();
+				}
+			}
+		}	
 	}	
+
+	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
+		String line = "";
+		String csvSplitBy = ",";
+
+		while((line = leitor.readLine()) != null){
+			String[] device = line.split(csvSplitBy);
+			System.out.println("Acesso: [id = " + device[ID_DEVICE] + "]"
+					+ " [Date: = " + device[DATE_DEVICE] + "]" + " [User = " + device[USER_DEVICE] + "]"
+					+ " [PC = " + device[PC_DEVICE] + "]" + " [Activity = "
+					+ device[ACTIVITY_DEVICE] + "]");
+
+		}
+	}
+
+	public static void leituraArquivoHTTP(String csvHTTP){
+		BufferedReader leitor = null;
+		try{
+			leitor = new BufferedReader(new FileReader(csvHTTP));
+			respostaArquivoHTTP(leitor);
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch (IOException e){
+			e.printStackTrace();
+		} finally{
+			if(leitor != null){
+				try{
+					leitor.close();
+				}catch (IOException e){
+					e.printStackTrace();
+				}
+			}
+		}	
+	}	
+
+	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
+		String line = "";
+		String csvSplitBy = ",";
+
+		while((line = leitor.readLine()) != null){
+			String[] http = line.split(csvSplitBy);
+			System.out.println("Acesso: [id = " + http[ID_HTTP] + "]"
+					+ " [Date: = " + http[DATE_HTTP] + "]" + " [User = " + http[USER_HTTP] + "]"
+					+ " [PC = " + http[PC_HTTP] + "]" + " [Activity = "
+					+ http[ACTIVITY_HTTP] + "]");
+
+		}
+	}
+
+	public static void leituraArquivoLDAP(String csvLDAP){
+		BufferedReader leitor = null;
+		try{
+			leitor = new BufferedReader(new FileReader(csvLDAP));
+			respostaArquivoLDAP(leitor);
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}catch (IOException e){
+			e.printStackTrace();
+		} finally{
+			if(leitor != null){
+				try{
+					leitor.close();
+				}catch (IOException e){
+					e.printStackTrace();
+				}
+			}
+		}	
+	}	
+
+	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
+		String line = "";
+		String csvSplitBy = ",";
+
+		while((line = leitor.readLine()) != null){
+			String[] ldap = line.split(csvSplitBy);
+			System.out.println("Acesso: [Employee Name = " + ldap[EMPLOYEE_NAME] + "]"
+					+ " [User ID: = " + ldap[USER_ID] + "]" + " [Email = " + ldap[EMAIL] + "]"
+					+ " [Domain = " + ldap[DOMAIN] + "]" + " [Role = "
+					+ ldap[ROLE] + "]");
+
+		}
+	}
+
 }
