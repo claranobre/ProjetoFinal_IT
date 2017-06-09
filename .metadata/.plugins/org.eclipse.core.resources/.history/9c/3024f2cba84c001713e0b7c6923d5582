@@ -1,0 +1,42 @@
+package br.imd.controle;
+
+
+public class Main extends LeituraLog{
+
+	public Main(String caminho) {
+		super(caminho);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		String csvLogon = new String("Dados/logon-sumarizado.csv");
+		LeituraLog csvDevice = new LeituraLog("/Dados/device.csv");
+		LeituraLog csvHTTP = new LeituraLog("Dados/http-completo.csv");
+		LeituraLog csvLDAP = new LeituraLog("Dados/ldap.csv");
+		
+		//leituraArquivoLogon(csvLogon);
+		//leituraArquivoDevice(csvDevice);
+		//leituraArquivoHTTP(csvHTTP);
+		//leituraArquivoLDAP(csvLDAP);
+	}
+
+}
+
+
+
+
+
+
+/* Arquivos no notebook de Clara:
+ * "/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/logon-sumarizado.csv"
+ * "/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/http-sumarizado.csv"
+ * "/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/ldap.csv"
+ * "/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.1/ProjetoFinal_IT/Dados/device.csv"
+ * 
+ * Arquivos no PC de Clara:
+ * "/Users/Clara Nobre/Documents/Git/ProjetoFinal_IT/Dados/logon-sumarizado.csv"
+ * "/Users/Clara Nobre/Documents/Git/ProjetoFinal_IT/Dados/http-sumarizado.csv"
+ * "/Users/Clara Nobre/Documents/Git/ProjetoFinal_IT/Dados/ldap.csv"
+ * "/Users/Clara Nobre/Documents/Git/ProjetoFinal_IT/Dados/device.csv"
+ */

@@ -14,7 +14,7 @@ public class LeituraLog {
 	private static final int ID_HTTP = 0, DATE_HTTP = 1, USER_HTTP = 2, PC_HTTP = 3, ACTIVITY_HTTP = 4;
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, EMAIL = 2, DOMAIN = 3, ROLE = 4;
-
+	
 	public static void leituraArquivoLogon(String csvLogon){
 		BufferedReader leitor = null;
 		try{

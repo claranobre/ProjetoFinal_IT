@@ -1,29 +1,81 @@
 package br.imd.controle;
 
-public class Atividades {
-	
-	private int idAtividade;
+import java.util.ArrayList;
+
+public class Atividades extends LeituraLog {
+
+	private String idAtividade;
 	private Device deviceUsado;
-	
-	
-	private void acaoUsuario(){}
-	
-	private void insert(){}
-	
-	private void logon(){}
-	
-	private void email(){}
-	
-	private void file(){}
-	
-	private void http(){}
-	
-	private void horarios(){}
-	
-	public int getIdAtividade() {
+
+	private ArrayList<String> dados = new ArrayList<String>();
+
+	public void acaoUsuario(){
+		if(idAtividade == ACTIVITY_DEVICE){
+			if(ACTIVITY_DEVICE == connect){
+				dados.add(idAtividade);
+				insert();
+				horario();
+			}
+			if(ACTIVITY_DEVICE == disconnect){
+				dados.add(idAtividade);	
+				insert();
+				horario();
+			}else{
+				System.out.println("ID incorreto");
+			}
+		}
+		if(idAtividade == ACTIVITY_LOGON){
+			if(ACTIVITY_LOGON == logon){
+				dados.add(idAtividade);
+				logon();
+				horario();
+			}
+			if(ACTIVITY_LOGON == logoff){
+				dados.add(idAtividade);
+				logon();
+				horario();
+			}else{
+				System.out.println("ID incorreto");
+			}
+		}
+
+	}
+
+	private boolean insert(boolean acao){
+		if(acao == true){
+			return connect;
+		}else{
+			return disconnect;
+		}
+	}
+
+	private boolean logon(boolean acao){
+		if(acao == true){
+			return logon;
+		}else{
+			return logoff;
+		}
+	}
+
+	private void email(){
+		ArrayList<Usuario> email = new ArrayList<Usuario>();
+
+	}
+
+	/*private void file(){}*/
+
+	private boolean http(boolean acesso){
+		if(acesso == true){
+			return on;
+		}else{
+			return off;
+		}
+	}
+
+	public String getIdAtividade() {
 		return idAtividade;
 	}
-	public void setIdAtividade(int idAtividade) {
+	public void setIdAtividade(String idAtividade) {
 		this.idAtividade = idAtividade;
 	}
 	public Device getDeviceUsado() {

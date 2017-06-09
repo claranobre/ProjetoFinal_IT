@@ -1,0 +1,64 @@
+package br.imd.controle;
+
+import java.util.ArrayList;
+
+public class Atividades extends LeituraLog {
+
+	private String idAtividade;
+	private Device deviceUsado;
+	
+	private ArrayList<String> dados = new ArrayList<String>();
+
+	public void acaoUsuario(){
+		if(idAtividade == ACTIVITY_DEVICE){
+			if(ACTIVITY_DEVICE == connect){
+				dados.add(idAtividade);
+				horario();
+			}
+			if(ACTIVITY_DEVICE == disconnect){
+				dados.add(idAtividade);	
+				horario();
+			}else{
+				System.out.println("ID incorreto");
+			}
+		}
+		if(idAtividade == ACTIVITY_LOGON){
+			if(ACTIVITY_LOGON == logon){
+				dados.add(idAtividade);
+				logon();
+			}
+			if(ACTIVITY_LOGON == logoff){
+				dados.add(idAtividade);
+				logon();
+			}else{
+				System.out.println("ID incorreto");
+			}
+		}
+		
+	}
+
+	private void insert(){}
+
+	private void logon(){}
+
+	private void email(){}
+
+	private void file(){}
+
+	private void http(){}
+
+	private void horarios(){}
+
+	public ArrayList<String> getIdAtividade() {
+		return idAtividade;
+	}
+	public void setIdAtividade(ArrayList<String> idAtividade) {
+		this.idAtividade = idAtividade;
+	}
+	public Device getDeviceUsado() {
+		return deviceUsado;
+	}
+	public void setDeviceUsado(Device deviceUsado) {
+		this.deviceUsado = deviceUsado;
+	}
+}
