@@ -79,44 +79,6 @@ public class Atividades extends LeituraLog {
 		return busiestHour;
 	}
 
-	public int quietestHour()
-	{
-		int numberOfAccessesAtQuietest = 9999;
-		int quietestHour = 0;
-		int index = 0;
-
-		while(index < hourCounts.length - 1){
-			if (numberOfAccessesAtQuietest > hourCounts[index]){
-				quietestHour = index;
-				numberOfAccessesAtQuietest = hourCounts[index];
-				index++;
-			}
-			else {
-				index++;
-			}
-		}
-		return quietestHour;
-	}
-
-	public int twobusiestHour()
-	{
-		int numberOfAccessesAtBusiest = 0;
-		int busiestHour = 0;
-		int index = 0;
-
-		while(index < hourCounts.length - 1){
-			if (numberOfAccessesAtBusiest < hourCounts[index] + hourCounts[index + 1]){
-				busiestHour = index;
-				numberOfAccessesAtBusiest = hourCounts[index] + hourCounts[index + 1];
-				index++;
-			}
-			else {
-				index++;
-			}
-		}
-		return busiestHour;
-	}          
-
 
 
 	public void acaoUsuario(){
