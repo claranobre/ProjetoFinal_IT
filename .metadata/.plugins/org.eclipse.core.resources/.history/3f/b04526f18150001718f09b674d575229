@@ -1,0 +1,14 @@
+package br.imd.controle;
+
+public class Usuario extends LeituraLog {
+	
+	public Usuario(){
+		
+	}
+	
+	public static void main(String[] args){
+		String csvLDAP = ("Dados/ldap.csv");
+		leituraArquivoLDAP(csvLDAP);
+	
+	}
+}

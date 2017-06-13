@@ -31,6 +31,10 @@ public class Tree{
 	public void setLeftTree(Tree leftTree) {
 		this.leftTree = leftTree;
 	}
+	
+	/*
+	 * A nossa Root são os Usuários
+	 */
 
 	public No getRoot() {
 		return root;
@@ -64,22 +68,22 @@ public class Tree{
 		return posX;
 	}
 
-	public void insereUsuario(int id, String nome, String email, String funcao) {
+	/*public void insereDado() {
 		Usuario usuario = new Usuario(id, nome, email, funcao);
 		No no = new No(usuario);
 		inserir(no);
-	}
+	}*/
 
 	private void inserir(No no) {
 		if (this.root == null) {
 			this.root = no;
 		} else {
-			if (no.getUsuario().getId() > this.root.getUsuario().getId()) {
+			if (no. > this.root.) {
 				if (this.rightTree == null) {
 					this.rightTree = new Tree();
 				}
 				this.rightTree.inserir(no);
-			} else if (no.getUsuario().getId() < this.root.getUsuario().getId()) {
+			} else if (no. < this.root.) {
 				if (this.leftTree == null) {
 					this.leftTree = new Tree();
 				}
@@ -90,7 +94,7 @@ public class Tree{
 	}
 
 	public Tree buscar(int id, Tree busca) {
-		if (id < busca.root.getUsuario().getId()) {
+		if (id < busca.root.) {
 			if (busca.leftTree == null) {
 				System.out.println("No nao Encontrado " + id);
 				this.control = false;
@@ -98,8 +102,8 @@ public class Tree{
 			} else {
 				buscar(id, busca.leftTree);
 			}
-		} else if (id == busca.root.getUsuario().getId()) {
-			System.out.println("No Encontrado, Usuario: " + busca.root.getUsuario().getNome());
+		} else if (id == busca.root.) {
+			System.out.println("No Encontrado, Usuario: " + busca.root.);
 			this.control = true;
 			return busca;
 		} else {
@@ -108,7 +112,7 @@ public class Tree{
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.rightTree);
+				buscar(busca.rightTree);
 			}
 		}
 		return null;
@@ -149,7 +153,7 @@ public class Tree{
 		if (node != null) {
 			if(node.root != null){
 				emordem(node.leftTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root. + " " + node.root.);
 				emordem(node.rightTree);
 			}
 		}
@@ -158,7 +162,7 @@ public class Tree{
 	public void prefixado(Tree node) {
 		if (node != null) {
 			if(node.root != null){
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root. + " " + node.root.);
 				prefixado(node.leftTree);
 				prefixado(node.rightTree);
 			}
@@ -170,7 +174,7 @@ public class Tree{
 			if(node.root != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root. + " " + node.root.);
 			}
 		}
 	}
