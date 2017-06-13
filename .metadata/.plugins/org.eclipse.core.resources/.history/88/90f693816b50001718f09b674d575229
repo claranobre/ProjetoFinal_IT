@@ -1,0 +1,53 @@
+package br.imd.visao;
+
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+import br.imd.controle.LeituraLog;
+
+public class TestaHistograma{
+	String line = null;
+	BufferedReader stream = null;
+	ArrayList<String> csvData = new ArrayList<String>();
+
+	public static void main (String[] args) throws IOException {
+		
+		
+		
+	    
+
+	    try {
+	        stream = new BufferedReader(new FileReader(csvFileName)); // Podes usar BufferedReader ao invés do CSVReader 
+	        while ((line = stream.readLine()) != null) {
+	            String[] splitted = line.split(","); // Provavelmente teu separador é , ou ; depende do teu arquivo
+	            List<String> dataLine = new ArrayList<String>(splitted.length); // Note que assim ele irá pegar todas as colunas, independente de quantas
+	            for (String data : splitted)
+	                dataLine.add(data);
+	                csvData.add(dataLine);
+	        }
+	    } finally {
+	        if (stream != null)
+	            stream.close();
+	    }
+
+	    return csvData;
+		
+		/*SerieTemporal serie = GeradorDeSerie.criaSerie(1,2,3,4,5,6,7,8,8,9,9,4,3,2,
+				1,2,2,4,5,6,7,8,9,10,11,10,6,3,2,6,7,8,9);*/
+
+		GeradorHistograma g = new GeradorHistograma("Histograma");
+		
+		JFrame frame = new JFrame("Minha janela");
+		frame.add(g.crearPanel());
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
+
+	}
+}

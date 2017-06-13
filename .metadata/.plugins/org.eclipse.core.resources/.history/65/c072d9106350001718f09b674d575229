@@ -1,0 +1,15 @@
+package br.imd.visao;
+
+import org.jfree.chart.plot.PlotOrientation;
+
+public class GeradorHistograma {
+
+	public GeradorHistograma(SerieTemporal serie, int comeco, int fim){
+		this.serie = serie;
+		this.comeco = comeco;
+		this.fim = fim;
+		this.dados = new DefaultCategoryDataset();
+		this.grafico = ChartFactory.createLineChart("Indicadores", "Dias", "Valores", dados,
+				PlotOrientation.VERTICAL, true, true, false);
+	}
+}

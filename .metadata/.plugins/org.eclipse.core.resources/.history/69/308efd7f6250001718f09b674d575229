@@ -1,0 +1,9 @@
+package org.jfree.chart.ChartFactory;
+
+public class Histograma {
+	DefaultCategoryDataset ds = new DefaultCategoryDataset();
+	ds.addValue(40.5, "maximo", "dia 1");
+	
+	JFreeChart grafico = ChartFactory.createLineChart("Meu Grafico", "Dia", 
+		    "Valor", ds, PlotOrientation.VERTICAL, true, true, false);
+}

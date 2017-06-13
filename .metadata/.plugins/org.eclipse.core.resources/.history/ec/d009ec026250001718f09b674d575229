@@ -1,0 +1,5 @@
+package org.jfree.chart.ChartFactory;
+
+public class Histograma implements CategoryDataset {
+	DefaultCategoryDataset ds = new DefaultCategoryDataset();
+}
