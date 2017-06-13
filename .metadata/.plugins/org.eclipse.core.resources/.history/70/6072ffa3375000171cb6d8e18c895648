@@ -1,4 +1,4 @@
-package br.imd.controle;
+package br.imd.control;
 
 public class No {
 	

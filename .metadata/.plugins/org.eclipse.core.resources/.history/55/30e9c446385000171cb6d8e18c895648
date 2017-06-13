@@ -170,7 +170,7 @@ public class Tree{
 			if(node.root != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getUsuario().getid() + " " + node.root.getUsuario().getNome());
 			}
 		}
 	}

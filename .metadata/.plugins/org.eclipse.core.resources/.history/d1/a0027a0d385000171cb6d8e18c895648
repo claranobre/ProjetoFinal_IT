@@ -92,23 +92,23 @@ public class Tree{
 	public Tree buscar(int id, Tree busca) {
 		if (id < busca.root.getUsuario().getId()) {
 			if (busca.leftTree == null) {
-				System.out.println("No nao Encontrado " + id);
+				System.out.println("No nao Encontrado " + matricula);
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.leftTree);
+				buscar(matricula, busca.leftTree);
 			}
-		} else if (id == busca.root.getUsuario().getId()) {
+		} else if (matricula == busca.root.getUsuario().getMatricula()) {
 			System.out.println("No Encontrado, Usuario: " + busca.root.getUsuario().getNome());
 			this.control = true;
 			return busca;
 		} else {
 			if (busca.rightTree == null) {
-				System.out.println("No nao Encontrado: " + id);
+				System.out.println("No nao Encontrado: " + matricula);
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.rightTree);
+				buscar(matricula, busca.rightTree);
 			}
 		}
 		return null;
@@ -121,8 +121,8 @@ public class Tree{
 		return maior;
 	}
 	
-	public Tree remover(int id, Tree remove){
-		remove = buscar(id, remove);
+	public Tree remover(int matricula, Tree remove){
+		remove = buscar(matricula, remove);
 		if (this.control){
 			if(remove.leftTree == null && remove.rightTree == null){
 				remove.root = null;
@@ -149,7 +149,7 @@ public class Tree{
 		if (node != null) {
 			if(node.root != null){
 				emordem(node.leftTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getUsuario().getMatricula() + " " + node.root.getUsuario().getNome());
 				emordem(node.rightTree);
 			}
 		}
@@ -158,7 +158,7 @@ public class Tree{
 	public void prefixado(Tree node) {
 		if (node != null) {
 			if(node.root != null){
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getUsuario().getMatricula() + " " + node.root.getUsuario().getNome());
 				prefixado(node.leftTree);
 				prefixado(node.rightTree);
 			}
@@ -170,7 +170,7 @@ public class Tree{
 			if(node.root != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getUsuario().getMatricula() + " " + node.root.getUsuario().getNome());
 			}
 		}
 	}
@@ -192,8 +192,8 @@ public class Tree{
 		g2d.drawOval(posX, posY, tam, tam);
 
 		g2d.setFont(fonte);
-		g2d.drawString(String.valueOf(root.getUsuario().getid()),
-				posX + ((tam / 2) - 4 * (String.valueOf(root.getUsuario().getid()).length())),
+		g2d.drawString(String.valueOf(root.getUsuario().getMatricula()),
+				posX + ((tam / 2) - 4 * (String.valueOf(root.getUsuario().getMatricula()).length())),
 				posY + ((tam / 2) + 4));
 		}
 */

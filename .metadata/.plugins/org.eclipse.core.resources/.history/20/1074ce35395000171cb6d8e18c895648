@@ -17,13 +17,13 @@ public class Atividades extends LeituraLog {
 		leitor = new LeituraLog();
 	}
 
-	/*public void analyzeHourlyData(){
+	public void analyzeHourlyData(){
 		while(leitor.hasMoreEntries()){
 			LogEntry entry = leitor.nextEntry();
 			int hour = entry.getHour();
 			hourCounts[hour]++;
 		}
-	}*/
+	}
 	/**
 	 * Print the hourly counts.
 	 * These should have been set with a prior

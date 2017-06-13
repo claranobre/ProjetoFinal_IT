@@ -17,13 +17,13 @@ public class Atividades extends LeituraLog {
 		leitor = new LeituraLog();
 	}
 
-	/*public void analyzeHourlyData(){
+	public void analyzeHourlyData(){
 		while(leitor.hasMoreEntries()){
 			LogEntry entry = leitor.nextEntry();
 			int hour = entry.getHour();
 			hourCounts[hour]++;
 		}
-	}*/
+	}
 	/**
 	 * Print the hourly counts.
 	 * These should have been set with a prior
@@ -35,6 +35,13 @@ public class Atividades extends LeituraLog {
 		for(int hour = 0; hour < hourCounts.length; hour++) {
 			System.out.println(hour + ": " + hourCounts[hour]);
 		}
+	}
+	/**
+	 * Print the lines of data read by the LogfileReader
+	 */
+	public void printData()
+	{
+		leitor.printData();
 	}
 
 	/**
@@ -111,7 +118,7 @@ public class Atividades extends LeituraLog {
 
 
 
-	/*public void acaoUsuario(){
+	public void acaoUsuario(){
 		if(idAtividade == ACTIVITY_DEVICE){
 			if(ACTIVITY_DEVICE == connect){
 				dados.add(idAtividade);
@@ -158,17 +165,17 @@ public class Atividades extends LeituraLog {
 	private void email(){
 		ArrayList<Usuario> email = new ArrayList<Usuario>();
 
-	}*/
+	}
 
 	/*private void file(){}*/
 
-	/*private boolean http(boolean acesso){
+	private boolean http(boolean acesso){
 		if(acesso == true){
 			return on;
 		}else{
 			return off;
 		}
-	}*/
+	}
 
 	public String getIdAtividade() {
 		return idAtividade;

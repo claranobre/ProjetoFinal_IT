@@ -1,4 +1,4 @@
-package br.imd.controle;
+package br.imd.control;
 
 public class Tree{
 
@@ -64,9 +64,9 @@ public class Tree{
 		return posX;
 	}
 
-	public void insereUsuario(int id, String nome, String email, String funcao) {
-		Usuario usuario = new Usuario(id, nome, email, funcao);
-		No no = new No(usuario);
+	public void insereAluno(int matricula, String nome) {
+		Aluno aluno = new Aluno(matricula, nome);
+		No no = new No(aluno);
 		inserir(no);
 	}
 
@@ -74,12 +74,12 @@ public class Tree{
 		if (this.root == null) {
 			this.root = no;
 		} else {
-			if (no.getUsuario().getId() > this.root.getUsuario().getId()) {
+			if (no.getAluno().getMatricula() > this.root.getAluno().getMatricula()) {
 				if (this.rightTree == null) {
 					this.rightTree = new Tree();
 				}
 				this.rightTree.inserir(no);
-			} else if (no.getUsuario().getId() < this.root.getUsuario().getId()) {
+			} else if (no.getAluno().getMatricula() < this.root.getAluno().getMatricula()) {
 				if (this.leftTree == null) {
 					this.leftTree = new Tree();
 				}
@@ -89,26 +89,26 @@ public class Tree{
 
 	}
 
-	public Tree buscar(int id, Tree busca) {
-		if (id < busca.root.getUsuario().getId()) {
+	public Tree buscar(int matricula, Tree busca) {
+		if (matricula < busca.root.getAluno().getMatricula()) {
 			if (busca.leftTree == null) {
-				System.out.println("No nao Encontrado " + id);
+				System.out.println("No nao Encontrado " + matricula);
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.leftTree);
+				buscar(matricula, busca.leftTree);
 			}
-		} else if (id == busca.root.getUsuario().getId()) {
-			System.out.println("No Encontrado, Usuario: " + busca.root.getUsuario().getNome());
+		} else if (matricula == busca.root.getAluno().getMatricula()) {
+			System.out.println("No Encontrado, aluno: " + busca.root.getAluno().getNome());
 			this.control = true;
 			return busca;
 		} else {
 			if (busca.rightTree == null) {
-				System.out.println("No nao Encontrado: " + id);
+				System.out.println("No nao Encontrado: " + matricula);
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.rightTree);
+				buscar(matricula, busca.rightTree);
 			}
 		}
 		return null;
@@ -121,8 +121,8 @@ public class Tree{
 		return maior;
 	}
 	
-	public Tree remover(int id, Tree remove){
-		remove = buscar(id, remove);
+	public Tree remover(int matricula, Tree remove){
+		remove = buscar(matricula, remove);
 		if (this.control){
 			if(remove.leftTree == null && remove.rightTree == null){
 				remove.root = null;
@@ -149,7 +149,7 @@ public class Tree{
 		if (node != null) {
 			if(node.root != null){
 				emordem(node.leftTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getAluno().getMatricula() + " " + node.root.getAluno().getNome());
 				emordem(node.rightTree);
 			}
 		}
@@ -158,7 +158,7 @@ public class Tree{
 	public void prefixado(Tree node) {
 		if (node != null) {
 			if(node.root != null){
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getAluno().getMatricula() + " " + node.root.getAluno().getNome());
 				prefixado(node.leftTree);
 				prefixado(node.rightTree);
 			}
@@ -170,7 +170,7 @@ public class Tree{
 			if(node.root != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
+				System.out.println(node.root.getAluno().getMatricula() + " " + node.root.getAluno().getNome());
 			}
 		}
 	}
@@ -192,8 +192,8 @@ public class Tree{
 		g2d.drawOval(posX, posY, tam, tam);
 
 		g2d.setFont(fonte);
-		g2d.drawString(String.valueOf(root.getUsuario().getid()),
-				posX + ((tam / 2) - 4 * (String.valueOf(root.getUsuario().getid()).length())),
+		g2d.drawString(String.valueOf(root.getAluno().getMatricula()),
+				posX + ((tam / 2) - 4 * (String.valueOf(root.getAluno().getMatricula()).length())),
 				posY + ((tam / 2) + 4));
 		}
 */
