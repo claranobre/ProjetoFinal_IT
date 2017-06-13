@@ -29,7 +29,39 @@ public class Atividades extends RespostaLog{
 				System.out.println("ID incorreto");
 			}
 		}
+
 	}
+
+	private boolean insert(boolean acao){
+		if(acao == true){
+			return connect;
+		}else{
+			return disconnect;
+		}
+	}
+
+	private boolean logon(boolean acao){
+		if(acao == true){
+			return logon;
+		}else{
+			return logoff;
+		}
+	}
+
+	private void email(){
+		ArrayList<Usuario> email = new ArrayList<Usuario>();
+
+	}
+
+	/*private void file(){}*/
+
+	/*private boolean http(boolean acesso){
+		if(acesso == true){
+			return on;
+		}else{
+			return off;
+		}
+	}*/
 
 	public String getIdAtividade() {
 		return idAtividade;
