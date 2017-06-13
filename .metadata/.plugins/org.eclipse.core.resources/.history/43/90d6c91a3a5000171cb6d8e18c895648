@@ -10,7 +10,6 @@ import java.io.IOException;
  * @author Ana Clara e Felipe Gilberto
  * Classe Leitura Log para ler os arquivos de log analisados
  */
-
 public class LeituraLog {
 
 	private static final int ID_DEVICE = 0, DATE_DEVICE = 1, USER_DEVICE = 2, PC_DEVICE = 3, ACTIVITY_DEVICE = 4;
@@ -18,10 +17,6 @@ public class LeituraLog {
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, EMAIL = 2, DOMAIN = 3, ROLE = 4;
 	
-	/**
-	 * Método leituraArquivoLogon para ler o arquivo Logon-sumarizado.csv
-	 * @param csvLogon
-	 */
 	public static void leituraArquivoLogon(String csvLogon){
 		BufferedReader leitor = null;
 		try{
@@ -55,11 +50,6 @@ public class LeituraLog {
 
 		}
 	}
-	
-	/**
-	 * Método leituraArquivoDevice para ler o arquivo Device.csv
-	 * @param csvDevice
-	 */
 
 	public static void leituraArquivoDevice(String csvDevice){
 		BufferedReader leitor = null;
@@ -94,11 +84,6 @@ public class LeituraLog {
 
 		}
 	}
-	
-	/**
-	 * Método leituraArquivoHTTP para ler o arquivo http-sumarizado.csv
-	 * @param csvHTTP
-	 */
 
 	public static void leituraArquivoHTTP(String csvHTTP){
 		BufferedReader leitor = null;
@@ -134,11 +119,6 @@ public class LeituraLog {
 		}
 	}
 
-	/**
-	 * Método leituraArquivoLDAP para ler o arquivo ldap.csv
-	 * @param csvLDAP
-	 */
-	
 	public static void leituraArquivoLDAP(String csvLDAP){
 		BufferedReader leitor = null;
 		try{
@@ -172,4 +152,5 @@ public class LeituraLog {
 
 		}
 	}
+
 }

@@ -136,7 +136,7 @@ public class LeituraLog {
 
 	/**
 	 * Método leituraArquivoLDAP para ler o arquivo ldap.csv
-	 * @param csvLDAP
+	 * @param csvHTTP
 	 */
 	
 	public static void leituraArquivoLDAP(String csvLDAP){
@@ -172,4 +172,5 @@ public class LeituraLog {
 
 		}
 	}
+
 }

@@ -19,7 +19,7 @@ public class LeituraLog {
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, EMAIL = 2, DOMAIN = 3, ROLE = 4;
 	
 	/**
-	 * Método leituraArquivoLogon para ler o arquivo Logon-sumarizado.csv
+	 * Método leituraArquivoLogon para ler o arquivo csv de Login
 	 * @param csvLogon
 	 */
 	public static void leituraArquivoLogon(String csvLogon){
@@ -57,7 +57,7 @@ public class LeituraLog {
 	}
 	
 	/**
-	 * Método leituraArquivoDevice para ler o arquivo Device.csv
+	 * Método leituraArquivoDevice para ler o arquivo csv de Acesso
 	 * @param csvDevice
 	 */
 
@@ -94,11 +94,6 @@ public class LeituraLog {
 
 		}
 	}
-	
-	/**
-	 * Método leituraArquivoHTTP para ler o arquivo http-sumarizado.csv
-	 * @param csvHTTP
-	 */
 
 	public static void leituraArquivoHTTP(String csvHTTP){
 		BufferedReader leitor = null;
@@ -134,11 +129,6 @@ public class LeituraLog {
 		}
 	}
 
-	/**
-	 * Método leituraArquivoLDAP para ler o arquivo ldap.csv
-	 * @param csvLDAP
-	 */
-	
 	public static void leituraArquivoLDAP(String csvLDAP){
 		BufferedReader leitor = null;
 		try{
@@ -172,4 +162,5 @@ public class LeituraLog {
 
 		}
 	}
+
 }

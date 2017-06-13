@@ -97,7 +97,7 @@ public class LeituraLog {
 	
 	/**
 	 * Método leituraArquivoHTTP para ler o arquivo http-sumarizado.csv
-	 * @param csvHTTP
+	 * @param csvDevice
 	 */
 
 	public static void leituraArquivoHTTP(String csvHTTP){
@@ -134,11 +134,6 @@ public class LeituraLog {
 		}
 	}
 
-	/**
-	 * Método leituraArquivoLDAP para ler o arquivo ldap.csv
-	 * @param csvLDAP
-	 */
-	
 	public static void leituraArquivoLDAP(String csvLDAP){
 		BufferedReader leitor = null;
 		try{
@@ -172,4 +167,5 @@ public class LeituraLog {
 
 		}
 	}
+
 }
