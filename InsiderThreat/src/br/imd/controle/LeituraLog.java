@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * 
@@ -11,12 +12,7 @@ import java.io.IOException;
  * Classe Leitura Log para ler os arquivos de log analisados
  */
 
-public class LeituraLog {
-
-	private static final int ID_DEVICE = 0, DATE_DEVICE = 1, USER_DEVICE = 2, PC_DEVICE = 3, ACTIVITY_DEVICE = 4;
-	private static final int ID_HTTP = 0, DATE_HTTP = 1, USER_HTTP = 2, PC_HTTP = 3, ACTIVITY_HTTP = 4;
-	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
-	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, EMAIL = 2, DOMAIN = 3, ROLE = 4;
+public class LeituraLog extends RespostaLog{
 	
 	/**
 	 * Método leituraArquivoLogon para ler o arquivo Logon-sumarizado.csv
@@ -41,20 +37,6 @@ public class LeituraLog {
 			}
 		}	
 	}	
-
-	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
-		String line = "";
-		String csvSplitBy = ",";
-
-		while((line = leitor.readLine()) != null){
-			String[] logon = line.split(csvSplitBy);
-			System.out.println("Acesso: [id = " + logon[ID_LOGON] + "]"
-					+ " [Date: = " + logon[DATE_LOGON] + "]" + " [User = " + logon[USER_LOGON] + "]"
-					+ " [PC = " + logon[PC_LOGON] + "]" + " [Activity = "
-					+ logon[ACTIVITY_LOGON] + "]");
-
-		}
-	}
 	
 	/**
 	 * Método leituraArquivoDevice para ler o arquivo Device.csv
@@ -80,20 +62,6 @@ public class LeituraLog {
 			}
 		}	
 	}	
-
-	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
-		String line = "";
-		String csvSplitBy = ",";
-
-		while((line = leitor.readLine()) != null){
-			String[] device = line.split(csvSplitBy);
-			System.out.println("Acesso: [id = " + device[ID_DEVICE] + "]"
-					+ " [Date: = " + device[DATE_DEVICE] + "]" + " [User = " + device[USER_DEVICE] + "]"
-					+ " [PC = " + device[PC_DEVICE] + "]" + " [Activity = "
-					+ device[ACTIVITY_DEVICE] + "]");
-
-		}
-	}
 	
 	/**
 	 * Método leituraArquivoHTTP para ler o arquivo http-sumarizado.csv
@@ -120,20 +88,6 @@ public class LeituraLog {
 		}	
 	}	
 
-	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
-		String line = "";
-		String csvSplitBy = ",";
-
-		while((line = leitor.readLine()) != null){
-			String[] http = line.split(csvSplitBy);
-			System.out.println("Acesso: [id = " + http[ID_HTTP] + "]"
-					+ " [Date: = " + http[DATE_HTTP] + "]" + " [User = " + http[USER_HTTP] + "]"
-					+ " [PC = " + http[PC_HTTP] + "]" + " [Activity = "
-					+ http[ACTIVITY_HTTP] + "]");
-
-		}
-	}
-
 	/**
 	 * Método leituraArquivoLDAP para ler o arquivo ldap.csv
 	 * @param csvLDAP
@@ -159,17 +113,4 @@ public class LeituraLog {
 		}	
 	}	
 
-	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
-		String line = "";
-		String csvSplitBy = ",";
-
-		while((line = leitor.readLine()) != null){
-			String[] ldap = line.split(csvSplitBy);
-			System.out.println("Acesso: [Employee Name = " + ldap[EMPLOYEE_NAME] + "]"
-					+ " [User ID: = " + ldap[USER_ID] + "]" + " [Email = " + ldap[EMAIL] + "]"
-					+ " [Domain = " + ldap[DOMAIN] + "]" + " [Role = "
-					+ ldap[ROLE] + "]");
-
-		}
-	}
 }
