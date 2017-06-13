@@ -31,10 +31,6 @@ public class Tree{
 	public void setLeftTree(Tree leftTree) {
 		this.leftTree = leftTree;
 	}
-	
-	/*
-	 * A nossa Root são os Usuários
-	 */
 
 	public No getRoot() {
 		return root;
@@ -174,7 +170,7 @@ public class Tree{
 			if(node.root != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root. + " " + node.root.);
+				System.out.println(node.root.getUsuario().getId() + " " + node.root.getUsuario().getNome());
 			}
 		}
 	}

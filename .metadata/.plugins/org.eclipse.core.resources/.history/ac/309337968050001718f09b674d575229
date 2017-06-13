@@ -19,7 +19,12 @@ public class Main extends LeituraLog{
 		 */
 		
 		Tree raiz = new Tree();
-		raiz.insereUsuario();
+		raiz.insereAluno(2015, "felipe");
+		raiz.insereAluno(2014, "ana");
+		raiz.insereAluno(2017, "salgado");
+		raiz.insereAluno(2012, "pedin");
+		raiz.buscar(2013, raiz);
+		raiz.buscar(2015, raiz);
 
 		System.out.println("Pre Ordem: ");
 		raiz.emordem(raiz);

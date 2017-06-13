@@ -4,13 +4,18 @@ public class Usuario extends LeituraLog {
 	
 	public Usuario(){
 		RespostaLog.USER_ID;
-		RespostaLog.EMPLOYEE_NAME;
-		RespostaLog.EMAIL;
-		RespostaLog.DOMAIN;
-		respostaLog.ROLE;
-			
+		
+		
 	}
-
+		
+		
+			employeeName.add(ldap[EMPLOYEE_NAME]);
+			userId.add(ldap[USER_ID]);
+			domain.add(ldap[DOMAIN]);
+			email.add(ldap[EMAIL]);
+			role.add(ldap[ROLE])i;
+	}
+	
 	public static void main(String[] args){
 		String csvLDAP = ("Dados/ldap.csv");
 		leituraArquivoLDAP(csvLDAP);

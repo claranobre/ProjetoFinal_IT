@@ -1,0 +1,13 @@
+package br.imd.controle;
+
+public class Usuario {
+	private int id;
+	private String nome;
+	private String email;
+	private String funcao;
+
+	public Usuario(){
+		/*
+		 * O usuario está contido no arquivo ldap e é adicionado em uma arrayList na classe RespostaLog */
+	}
+}

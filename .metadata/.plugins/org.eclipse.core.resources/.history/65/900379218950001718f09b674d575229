@@ -34,7 +34,7 @@ public class Tree{
 	
 	/*
 	 * A nossa Root são os Usuários
-	 */
+	 * */
 
 	public No getRoot() {
 		return root;

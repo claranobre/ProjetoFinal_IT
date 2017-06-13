@@ -1,0 +1,14 @@
+package br.imd.controle;
+
+public class Usuario extends RespostaLog {
+	
+	public static void main(String[] args){
+	String csvLDAP = ("Dados/ldap.csv");
+	leituraArquivoLDAP(csvLDAP);
+	}
+	
+	public Usuario(){
+
+		//O usuario está contido no arquivo ldap e é adicionado em uma arrayList na classe RespostaLog
+	}
+}

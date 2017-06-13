@@ -12,7 +12,7 @@ public class Main extends LeituraLog{
 		//leituraArquivoLogon(csvLogon);
 		//leituraArquivoDevice(csvDevice);
 		//leituraArquivoHTTP(csvHTTP);
-		//leituraArquivoLDAP(csvLDAP);
+		leituraArquivoLDAP(csvLDAP);
 		
 		/**
 		 * Método principal sem interface gráfica

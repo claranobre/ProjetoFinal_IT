@@ -10,23 +10,9 @@ public class Main extends LeituraLog{
 		String csvLDAP = ("Dados/ldap.csv");
 		
 		//leituraArquivoLogon(csvLogon);
-		//leituraArquivoDevice(csvDevice);
+		leituraArquivoDevice(csvDevice);
 		//leituraArquivoHTTP(csvHTTP);
 		//leituraArquivoLDAP(csvLDAP);
-		
-		/**
-		 * Método principal sem interface gráfica
-		 */
-		
-		Tree raiz = new Tree();
-		raiz.insereUsuario();
-
-		System.out.println("Pre Ordem: ");
-		raiz.emordem(raiz);
-		System.out.println("Pre Ordem: ");
-		raiz.prefixado(raiz);
-		System.out.println("Pos Ordem: ");
-		raiz.posfixado(raiz);
 	}
 
 }

@@ -31,10 +31,6 @@ public class Tree{
 	public void setLeftTree(Tree leftTree) {
 		this.leftTree = leftTree;
 	}
-	
-	/*
-	 * A nossa Root são os Usuários
-	 */
 
 	public No getRoot() {
 		return root;

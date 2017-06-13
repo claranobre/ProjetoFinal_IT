@@ -1,0 +1,22 @@
+package br.imd.controle;
+
+public class Usuario extends LeituraLog {
+	
+	public Usuario(int id, String nome, String email, String funcao ){
+		String[] ldap = line.split(csvSplitBy);
+		this.id = userId;
+	}
+		
+		
+			employeeName.add(ldap[EMPLOYEE_NAME]);
+			userId.add(ldap[USER_ID]);
+			domain.add(ldap[DOMAIN]);
+			email.add(ldap[EMAIL]);
+			role.add(ldap[ROLE])i;
+	}
+	
+	public static void main(String[] args){
+		String csvLDAP = ("Dados/ldap.csv");
+		leituraArquivoLDAP(csvLDAP);
+	}
+}
