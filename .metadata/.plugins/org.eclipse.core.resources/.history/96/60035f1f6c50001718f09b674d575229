@@ -28,7 +28,7 @@ public class GeradorHistograma{
 	static BufferedReader stream = null;
 	static ArrayList<String> csvData = new ArrayList<String>();
 	
-	public GeradorHistograma(String title) throws IOException {
+	public GeradorHistograma(String title) {
 		JPanel chartPanel = crearPanel();
 		chartPanel.setPreferredSize(new java.awt.Dimension(500, 475));
 		setContentPane(chartPanel);

@@ -28,7 +28,7 @@ public class GeradorHistograma{
 	static BufferedReader stream = null;
 	static ArrayList<String> csvData = new ArrayList<String>();
 	
-	public GeradorHistograma(String title) throws IOException {
+	public GeradorHistograma(String title) {
 		JPanel chartPanel = crearPanel();
 		chartPanel.setPreferredSize(new java.awt.Dimension(500, 475));
 		setContentPane(chartPanel);
@@ -39,7 +39,7 @@ public class GeradorHistograma{
 		
 	}
 
-	private static IntervalXYDataset crearDataset() throws IOException {
+	private static IntervalXYDataset crearDataset() {
 		HistogramDataset dataset = new HistogramDataset();
 		
 		try {
@@ -55,7 +55,6 @@ public class GeradorHistograma{
 			if (stream != null)
 				stream.close();
 		}
-		return dataset;
 	}
 	private static JFreeChart crearChart(IntervalXYDataset dataset) {
 		JFreeChart chart = ChartFactory.createHistogram(
@@ -74,7 +73,7 @@ public class GeradorHistograma{
 		return chart;
 	}
 	
-	public static JPanel crearPanel() throws IOException {
+	public static JPanel crearPanel() {
 		JFreeChart chart = crearChart(crearDataset());
 		return new ChartPanel(chart);
 	}
