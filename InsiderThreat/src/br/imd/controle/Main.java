@@ -10,7 +10,7 @@ public class Main extends LeituraLog{
 		String csvLDAP = ("Dados/ldap.csv");
 		
 		//leituraArquivoLogon(csvLogon);
-		leituraArquivoDevice(csvDevice);
+		//leituraArquivoDevice(csvDevice);
 		//leituraArquivoHTTP(csvHTTP);
 		//leituraArquivoLDAP(csvLDAP);
 	}
