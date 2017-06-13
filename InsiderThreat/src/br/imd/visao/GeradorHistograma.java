@@ -1,51 +1,68 @@
 package br.imd.visao;
 
+import java.awt.Window;
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.swing.JPanel;
+
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYBarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.statistics.HistogramDataset;
+import org.jfree.data.xy.IntervalXYDataset;
+import org.jfree.ui.RefineryUtilities;
 
 public class GeradorHistograma {
 
-	private Object grafico;
-	private DefaultCategoryDataset dados;
-	private int fim;
-	private int comeco;
-	private SerieTemporal serie;
-
-	public GeradorHistograma(SerieTemporal serie, int comeco, int fim){
-		this.serie = serie;
-		this.comeco = comeco;
-		this.fim = fim;
-		this.dados = new DefaultCategoryDataset();
-		this.grafico = ChartFactory.createLineChart("Indicadores", "Dias", "Valores", dados,
-				PlotOrientation.VERTICAL, true, true, false);
+	public GeradorHistograma(String title) {
+		JPanel chartPanel = crearPanel();
+		chartPanel.setPreferredSize(new java.awt.Dimension(500, 475));
+		setContentPane(chartPanel);
 	}
 
-	public void plotaMediaMovelSimples() {
+	private void setContentPane(JPanel chartPanel) {
+		// TODO Auto-generated method stub
+		
+	}
 
-		MediaMovelSimples ind = new MediaMovelSimples();
+	private static IntervalXYDataset crearDataset() {
+		HistogramDataset dataset = new HistogramDataset();
+		
+		double vector[] = {63, 89, 36, 49, 56, 64, 59, 35, 78,
+				43, 53, 70, 57, 62, 43, 68, 62, 26,
+				64, 72, 52, 51, 62, 60, 71, 61, 55,
+				59, 60, 67, 57, 67, 61, 67, 51, 81,
+				53, 64, 76, 44, 73, 56, 62, 63, 60};
 
-		for (int i = comeco; i <= fim; i++) {
-
-			double valor = ind.calcula(i, serie);
-
-			dados.addValue(valor, ind.toString(), Integer.valueOf(i));
-
+		dataset.addSeries("Frequência", vector, 8);
+		return dataset;
+	}
+	private static JFreeChart crearChart(IntervalXYDataset dataset) {
+		JFreeChart chart = ChartFactory.createHistogram(
+				"Histograma", null, null, dataset, PlotOrientation.VERTICAL,
+				true, true,false);
+		
+		XYPlot plot = (XYPlot) chart.getPlot();
+		XYBarRenderer renderer = (XYBarRenderer) plot.getRenderer();
+		renderer.setDrawBarOutline(false);
+		try{
+			ChartUtilities.saveChartAsJPEG(new File("histograma.jpg"), chart, 500, 475);
 		}
-
+		catch(IOException e){
+			System.out.println("Erro ao abrir o arquivo");
+		}
+		return chart;
 	}
-
-
-
-	public void salva(OutputStream out) throws IOException {
-
-		ChartUtilities.writeChartAsPNG(out, (JFreeChart) grafico, 500, 350);
-
+	
+	public static JPanel crearPanel() {
+		JFreeChart chart = crearChart(crearDataset());
+		return new ChartPanel(chart);
 	}
-
 }

@@ -1,0 +1,49 @@
+package br.imd.visao;
+
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.swing.JPanel;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.statistics.HistogramDataset;
+import org.jfree.data.xy.IntervalXYDataset;
+
+public class GeradorHistograma {
+
+	public GeradorHistograma(String title) {
+		super(title);
+		JPanel chartPanel = createPanel();
+		chartPanel.setPreferredSize(new java.awt.Dimension(500, 475));
+		setContentPane(chartPanel);
+
+	public void plotaMediaMovelSimples() {
+
+		MediaMovelSimples ind = new MediaMovelSimples();
+
+		for (int i = comeco; i <= fim; i++) {
+
+			double valor = ind.calcula(i, serie);
+
+			dados.addValue(valor, ind.toString(), Integer.valueOf(i));
+
+		}
+
+	}
+
+	public void salva(OutputStream out) throws IOException {
+
+		ChartUtilities.writeChartAsPNG(out, (JFreeChart) grafico, 500, 350);
+
+	}
+	
+	public JPanel getPanel() {
+		  return new ChartPanel((JFreeChart) grafico);
+	}
+
+}
