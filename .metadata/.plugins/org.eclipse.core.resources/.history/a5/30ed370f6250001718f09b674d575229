@@ -1,0 +1,6 @@
+package org.jfree.chart.ChartFactory;
+
+public class Histograma {
+	DefaultCategoryDataset ds = new DefaultCategoryDataset();
+	ds.addValue(40.5, "maximo", "dia 1");
+}

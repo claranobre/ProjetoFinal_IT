@@ -1,0 +1,6 @@
+package br.imd.visao;
+package org.jfree.chart.ChartFactory;
+
+public class Histograma {
+	DefaultCategoryDataset ds = new DefaultCategoryDataset();
+}
