@@ -61,7 +61,7 @@ public class RespostaLog {
 			devicePc.add(device[PC_DEVICE]);
 			deviceActivity.add(device[ACTIVITY_DEVICE]);
 		}
-		
+		divisorDate(deviceDate);
 	}
 	
 	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
@@ -81,6 +81,7 @@ public class RespostaLog {
 			httpPc.add(http[PC_HTTP]);
 			httpActivity.add(http[ACTIVITY_HTTP]);
 		}
+		divisorDate(httpDate);
 	}
 
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
@@ -100,7 +101,6 @@ public class RespostaLog {
 			email.add(ldap[EMAIL]);
 			role.add(ldap[ROLE]);
 		}
-		imprimirCampo(role);
 	}
 	
 	public static void divisorDate(ArrayList<String> date){
@@ -112,41 +112,58 @@ public class RespostaLog {
 		String divisor5 = " ";
 		ArrayList<String> diasDate = new ArrayList<String>();
 		ArrayList<String> horasDate = new ArrayList<String>();
-		int dias[] = {0};
-		int mes[] = {0};
+		int dias[] = new int[31];
+		int mes[] = new int [12];
 		String input;
 		
-		
-		for (int i = 0; i < date.size(); i++){
+		for (int i = 1; i < date.size(); i++){
 			input = date.get(i);
 			Scanner s = new Scanner(input).useDelimiter(divisor5);
-			
-			//diasDate.add(s.next());
-			//horasDate.add(s.next());
+			diasDate.add(s.next());
+			horasDate.add(s.next());
 		}
 		
-		//imprimirCampo(diasDate);
-		//imprimirCampo(horasDate);
+		
+		for (int i = 0; i < diasDate.size(); i++){
+			input = diasDate.get(i);
+			Scanner s = new Scanner(input).useDelimiter(divisor2);
+			int valor = Integer.parseInt(s.next());
+			mes[valor-1]++;
+			valor = Integer.parseInt(s.next());
+			dias[valor-1]++;
+		}
 		
 		/*
-		for (int i = 0; i < diasDate.size(); i++){
-			String[] data = line.split(divisor2);
-			int valor = Integer.parseInt(data[MES]);
-			mes[valor]++;
-			valor = Integer.parseInt(data[DIA]);
-			dias[valor]++;
-		}
-		
 		for (int i = 0; i < date.size(); i++){
 			String[] data = line.split(divisor3);
 			int valor = Integer.parseInt(data[HORA]);
 			[valor]++;
 			valor = Integer.parseInt(data[DIA]);
 			dias[valor]++;
-		}
 		*/
+		System.out.println("Dias");
+		for (int i = 0; i< 31; i++){
+			if(dias[i] != 0){
+				System.out.println("Dia " + (i+1) + ":" + dias[i]);
+			}
+			else{
+				System.out.println("0");
+			}
+		}
+		System.out.println();
 		
+		for (int i = 0; i< 12; i++){
+			if(mes[i] != 0){
+				System.out.println("Mes " + (i+1) + ":" + mes[i]);
+			}
+			else{
+				System.out.println("0");
+			}
+		}
 	}
+	
+		
+		
 	
 	public void divisorUser(){
 		

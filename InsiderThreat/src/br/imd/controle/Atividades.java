@@ -10,7 +10,7 @@ public class Atividades extends LeituraLog{
 		LeituraLog leitor = new LeituraLog();
 	}
 
-	/*public void acaoUsuario(){
+	public void acaoUsuario(){
 		if(idAtividade == ACTIVITY_DEVICE){
 			if(ACTIVITY_DEVICE == connect){
 				dados.add(idAtividade);
@@ -57,17 +57,16 @@ public class Atividades extends LeituraLog{
 	private void email(){
 		ArrayList<Usuario> email = new ArrayList<Usuario>();
 
-	}*/
+	}
 
-	/*private void file(){}*/
-
-	/*private boolean http(boolean acesso){
+	
+	private boolean http(boolean acesso){
 		if(acesso == true){
 			return on;
 		}else{
 			return off;
 		}
-	}*/
+	}
 
 	public String getIdAtividade() {
 		return idAtividade;
