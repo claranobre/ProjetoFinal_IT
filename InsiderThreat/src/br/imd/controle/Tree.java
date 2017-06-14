@@ -2,20 +2,27 @@ package br.imd.controle;
 
 public class Tree{
 
-	private No root;
+	private No usuario; /* raíz da árvore */
+	private No acao;
 	private Tree leftTree;
 	private Tree rightTree;
 	private Tree maiorFilho;
+	/**
+	 * atributos para criacao da interface gráfica da Arvore Binaria de Busca
+	 */
 	private int height;
 	private int posX;
 	private int posY;
-	private int tam = 50; /* valor do tamanho base da árvore */
+	private int tam = 50; /* valor do tamanho base da arvore */
 	private boolean control = false;
 
 	public Tree() {
 		// construtor vazio
 	}
-
+	/**
+	 * Método para retornar as atividades consideradas anormais dos usuários
+	 * @return rightTree
+	 */
 	public Tree getRightTree() {
 		return rightTree;
 	}
@@ -23,25 +30,16 @@ public class Tree{
 	public void setRightTree(Tree rightTree) {
 		this.rightTree = rightTree;
 	}
-
+	/**
+	 * Metodo para retornar as atividades consideradas normais dos usuários
+	 * @return leftTree
+	 */
 	public Tree getLeftTree() {
 		return leftTree;
 	}
 
 	public void setLeftTree(Tree leftTree) {
 		this.leftTree = leftTree;
-	}
-	
-	/*
-	 * A nossa Root são os Usuários
-	 */
-
-	public No getRoot() {
-		return root;
-	}
-
-	public void setRoot(No root) {
-		this.root = root;
 	}
 
 	public int getHeight() {
@@ -68,75 +66,74 @@ public class Tree{
 		return posX;
 	}
 
-	/*public void insereDado() {
-		Usuario usuario = new Usuario(id, nome, email, funcao);
-		No no = new No(usuario);
+	public void insereAcao(){
+		Atividades acao = new Atividades();
+		No no = new No(acao);
 		inserir(no);
-	}*/
+	}
 
 	private void inserir(No no) {
-		if (this.root == null) {
-			this.root = no;
+		if (this.acao == null) {
+			this.acao = no;
 		} else {
-			if (no. > this.root.) {
+			//if (no.acao > this.usuario.acaoUsuario()) {
 				if (this.rightTree == null) {
 					this.rightTree = new Tree();
 				}
 				this.rightTree.inserir(no);
-			} else if (no. < this.root.) {
+			//} else if (no.acao < this.usuario.acaoUsuario()) {
 				if (this.leftTree == null) {
 					this.leftTree = new Tree();
 				}
 				this.leftTree.inserir(no);
 			}
 		}
+	//}
 
-	}
-
-	public Tree buscar(int id, Tree busca) {
-		if (id < busca.root.) {
+	public Tree buscar(int acao, Tree busca) {
+		if (acao < busca.usuario.acaoUsuario()) {
 			if (busca.leftTree == null) {
-				System.out.println("No nao Encontrado " + id);
+				System.out.println("No nao Encontrado " + acao);
 				this.control = false;
 				return null;
 			} else {
-				buscar(id, busca.leftTree);
+				buscar(acao, busca.leftTree);
 			}
-		} else if (id == busca.root.) {
-			System.out.println("No Encontrado, Usuario: " + busca.root.);
+		} else if (acao == busca.usuario.acaoUsuario()) {
+			System.out.println("No Encontrado, Usuario: " + busca.usuario.acaoUsuario());
 			this.control = true;
 			return busca;
 		} else {
 			if (busca.rightTree == null) {
-				System.out.println("No nao Encontrado: " + id);
+				System.out.println("No nao Encontrado: " + acao);
 				this.control = false;
 				return null;
 			} else {
-				buscar(busca.rightTree);
+				//buscar(busca.rightTree);
 			}
 		}
 		return null;
 	}
 	
 	public Tree maiorNo(Tree maior){
-		if(maior.rightTree.root != null){
+		if(maior.rightTree.usuario != null){
 			maiorNo(maior.rightTree);
 		}
 		return maior;
 	}
 	
-	public Tree remover(int id, Tree remove){
-		remove = buscar(id, remove);
+	public Tree remover(int acao, Tree remove){
+		remove = buscar(acao, remove);
 		if (this.control){
 			if(remove.leftTree == null && remove.rightTree == null){
-				remove.root = null;
+				remove.usuario = null;
 				
 			}else if(remove.leftTree != null && remove.rightTree == null){
-				remove.root = leftTree.root;
+				remove.usuario = leftTree.usuario;
 				remove.setLeftTree(null);
 			}
 			else if(remove.leftTree == null && remove.rightTree != null){
-				remove.root = rightTree.root;
+				remove.usuario = rightTree.usuario;
 				remove.setRightTree(null);
 				
 			} else {
@@ -149,37 +146,37 @@ public class Tree{
 		return null;
 	}
 
-	public void emordem(Tree node) {
+	/*public busca emordem(Tree node) {
 		if (node != null) {
-			if(node.root != null){
+			if(node.usuario != null){
 				emordem(node.leftTree);
-				System.out.println(node.root. + " " + node.root.);
+				System.out.println(node.usuario.acaoUsuario() + " " + node.usuario.acaoUsuario());
 				emordem(node.rightTree);
 			}
 		}
-	}
+	}*/
 
-	public void prefixado(Tree node) {
+	/*public busca prefixado(Tree node) {
 		if (node != null) {
-			if(node.root != null){
-				System.out.println(node.root. + " " + node.root.);
+			if(node.usuario != null){
+				System.out.println(node.usuario.acaoUsuario() + " " + node.usuario.acaoUsuario());
 				prefixado(node.leftTree);
 				prefixado(node.rightTree);
 			}
 		}
-	}
+	}*/
 
-	public void posfixado(Tree node) {
+	/*public busca posfixado(Tree node) {
 		if (node != null) {
-			if(node.root != null){
+			if(node.usuario != null){
 				posfixado(node.leftTree);
 				posfixado(node.rightTree);
-				System.out.println(node.root. + " " + node.root.);
+				System.out.println(node.usuario.acaoUsuario() + " " + node.usuario.acaoUsuario());
 			}
 		}
-	}
+	}*/
 
-	/*public void paint(Graphics g) {
+	/*public voacao paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		Font fonte = new Font("Arial", Font.BOLD, 16);
 
@@ -196,8 +193,8 @@ public class Tree{
 		g2d.drawOval(posX, posY, tam, tam);
 
 		g2d.setFont(fonte);
-		g2d.drawString(String.valueOf(root.getUsuario().getid()),
-				posX + ((tam / 2) - 4 * (String.valueOf(root.getUsuario().getid()).length())),
+		g2d.drawString(String.valueOf(usuario.getUsuario().getacao()),
+				posX + ((tam / 2) - 4 * (String.valueOf(usuario.getUsuario().getacao()).length())),
 				posY + ((tam / 2) + 4));
 		}
 */

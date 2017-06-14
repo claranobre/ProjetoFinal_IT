@@ -19,14 +19,7 @@ public class Main extends LeituraLog{
 		 */
 		
 		Tree raiz = new Tree();
-		raiz.insereUsuario();
-
-		System.out.println("Pre Ordem: ");
-		raiz.emordem(raiz);
-		System.out.println("Pre Ordem: ");
-		raiz.prefixado(raiz);
-		System.out.println("Pos Ordem: ");
-		raiz.posfixado(raiz);
+		//raiz.insereDados();
 	}
 
 }

@@ -1,16 +1,25 @@
 package br.imd.controle;
 
+import java.util.ArrayList;
+
 public class Atividades extends RespostaLog{
 
 	private String idAtividade;
-	private Device deviceUsado;
+	private String deviceUsado;
+	
+	private ArrayList<String> diasSemana;
+	
+	
+	public void diaCorrente(){}
+	
+	public void anteriores(){}
+	
+	public void suspeitas(){}
 
 	
-	public void logAnalyzer(){
-		LeituraLog leitor = new LeituraLog();
-	}
+	public void AnalisadorDeLog(){}
 
-	public void acaoUsuario(){
+	/*public void acaoUsuario(){
 		if(idAtividade == ACTIVITY_DEVICE){
 			if(deviceActivity == connect){
 				
@@ -29,18 +38,5 @@ public class Atividades extends RespostaLog{
 				System.out.println("ID incorreto");
 			}
 		}
-	}
-
-	public String getIdAtividade() {
-		return idAtividade;
-	}
-	public void setIdAtividade(String idAtividade) {
-		this.idAtividade = idAtividade;
-	}
-	public Device getDeviceUsado() {
-		return deviceUsado;
-	}
-	public void setDeviceUsado(Device deviceUsado) {
-		this.deviceUsado = deviceUsado;
-	}
+	}*/
 }
