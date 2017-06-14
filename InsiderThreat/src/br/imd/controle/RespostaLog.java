@@ -5,14 +5,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RespostaLog {
-	
+public class RespostaLog extends Usuario{
+
 	private static final int ID_DEVICE = 0, DATE_DEVICE = 1, USER_DEVICE = 2, PC_DEVICE = 3, ACTIVITY_DEVICE = 4;
 	private static final int ID_HTTP = 0, DATE_HTTP = 1, USER_HTTP = 2, PC_HTTP = 3, ACTIVITY_HTTP = 4;
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, DOMAIN = 2, EMAIL = 3, ROLE = 4;
 	private static final int MES = 0, DIA = 1, ANO = 2; 
 	private static final int HORA = 0, MINUTO = 1, SEGUNDO = 3;
+	static ArrayList<Usuario> users = new ArrayList<Usuario>();
 	
 	
 	String line = "";
@@ -27,21 +28,23 @@ public class RespostaLog {
 	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		ArrayList<String> logonId = new ArrayList<String>();
-		ArrayList<String> logonDate = new ArrayList<String>();
-		ArrayList<String> logonUser = new ArrayList<String>();
-		ArrayList<String> logonPc = new ArrayList<String>();
-		ArrayList<String> logonActivity = new ArrayList<String>();
 
 		while((line = leitor.readLine()) != null){
 			String[] logon = line.split(divisor);
-			logonId.add(logon[ID_LOGON]);
-			logonDate.add(logon[DATE_LOGON]);
-			logonUser.add(logon[USER_LOGON]);
-			logonPc.add(logon[PC_LOGON]);
-			logonActivity.add(logon[ACTIVITY_LOGON]);
+			String user, pc;
+			//divisorDate(DATE_LOGON);
+			user = divisorUser(logon[USER_LOGON]);
+			pc = divisorPc(logon[PC_LOGON]);
+			for(int i = 1; i < users.size(); i++){
+				if(users.get(i).getUser_ID() == logon[USER_LOGON]){
+					users.get(i).newActivityDevice(logon[PC_LOGON], logon[ACTIVITY_LOGON]);
+				}
+			}
+			
+			for(int i = 1; i < users.size(); i++){
+				users.get(i).imprimirAtividades();
+			}
 		}
-		divisorDate(logonDate);
 	}
 	
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
@@ -87,34 +90,23 @@ public class RespostaLog {
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		ArrayList<String> employeeName = new ArrayList<String>();
-		ArrayList<String> userId = new ArrayList<String>();
-		ArrayList<String> domain = new ArrayList<String>();
-		ArrayList<String> email = new ArrayList<String>();
-		ArrayList<String> role = new ArrayList<String>();
 		
 		while((line = leitor.readLine()) != null){
 			String[] ldap = line.split(divisor);
-			employeeName.add(ldap[EMPLOYEE_NAME]);
-			userId.add(ldap[USER_ID]);
-			domain.add(ldap[DOMAIN]);
-			email.add(ldap[EMAIL]);
-			role.add(ldap[ROLE]);
+			Usuario novo = new Usuario();
+			novo.setUsuario(ldap[EMPLOYEE_NAME], ldap[USER_ID], ldap[DOMAIN], ldap[EMAIL], ldap[ROLE]);
+			users.add(novo);
 		}
 	}
 	
 	public static void divisorDate(ArrayList<String> date){
-		String line = "";
-		String divisor = ",";
 		String divisor2 = "/";
 		String divisor3 = ":";
-		String divisor4 = "-";
 		String divisor5 = " ";
 		ArrayList<String> diasDate = new ArrayList<String>();
 		ArrayList<String> horasDate = new ArrayList<String>();
-		int dias[] = new int[31];
-		int mes[] = new int [12];
 		String input;
+		int day, month, year, hour, minute, second;
 		
 		for (int i = 1; i < date.size(); i++){
 			input = date.get(i);
@@ -128,54 +120,51 @@ public class RespostaLog {
 			input = diasDate.get(i);
 			Scanner s = new Scanner(input).useDelimiter(divisor2);
 			int valor = Integer.parseInt(s.next());
-			mes[valor-1]++;
-			valor = Integer.parseInt(s.next());
-			dias[valor-1]++;
+			//
+			//valor = Integer.parseInt(s.next());
+			//dias[valor-1]++;
 		}
 		
-		/*
-		for (int i = 0; i < date.size(); i++){
+		
+		/*for (int i = 0; i < date.size(); i++){
 			String[] data = line.split(divisor3);
 			int valor = Integer.parseInt(data[HORA]);
 			[valor]++;
 			valor = Integer.parseInt(data[DIA]);
 			dias[valor]++;
 		*/
-		System.out.println("Dias");
-		for (int i = 0; i< 31; i++){
-			if(dias[i] != 0){
-				System.out.println("Dia " + (i+1) + ":" + dias[i]);
-			}
-			else{
-				System.out.println("0");
-			}
-		}
-		System.out.println();
-		
-		for (int i = 0; i< 12; i++){
-			if(mes[i] != 0){
-				System.out.println("Mes " + (i+1) + ":" + mes[i]);
-			}
-			else{
-				System.out.println("0");
-			}
-		}
 	}
-	
 		
-		
-	
-	public void divisorUser(){
-		
+	public static String divisorUser(String user){
+		String divisor2 = "/";
+		for (int i = 0; i < user.length(); i++){
+			Scanner s = new Scanner(user).useDelimiter(divisor2);
+			user = s.next();
+			//user = s.next();
+		}
+		return user;
 	}
-	
-	public void divisorPc(){
 		
+	
+	public static String divisorPc(String pc){
+		String divisor4 = "-";
+		for (int i = 0; i < pc.length(); i++){
+			Scanner s = new Scanner(pc).useDelimiter(divisor4);
+			pc = s.next();
+			//pc = s.next();
+		}
+		return pc;
 	}
 	
 	public static void imprimirCampo(ArrayList<String> campo){
 		for (int i = 0; i < campo.size(); i++){
 			System.out.println(campo.get(i));
+		}
+	}
+		
+	public static void imprimirLista(ArrayList<Usuario> lista){
+		for (int i = 1; i < lista.size(); i++){
+			System.out.println("UserID: "+ lista.get(i).getName());
 		}
 	}
 }

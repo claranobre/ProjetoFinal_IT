@@ -1,87 +1,61 @@
 package br.imd.controle;
 
-import java.util.ArrayList;
-
-public class Atividades extends RespostaLog{
-
-	private String idAtividade;
-	private String deviceUsado;
+public class Atividades{
 	
-	private ArrayList<String> diasSemana;
+	private String connect;
+	private String logon;
+	private String access;
+	private int day, month, year, hour, minute, second;
+	private String pc;
 	
-	
-	public void diaCorrente(){}
-	
-	public void anteriores(){}
-	
-	public void suspeitas(){}
-
-	
-	public void AnalisadorDeLog(){}
-
-	public void acaoUsuario(){
-		if(idAtividade == ACTIVITY_DEVICE){
-			if(deviceActivity == connect){
-				
-			}
-			if(deviceActivity == disconnect){
-
-			}else{
-				System.out.println("ID incorreto");
-			}
-		}
-		if(idAtividade == ACTIVITY_LOGON){
-			if(logonActivity == logon){
-			}
-			if(logonActivity == logoff){
-			}else{
-				System.out.println("ID incorreto");
-			}
-		}
-
+	public void setDate(int day, int month, int year, int hour, int minute, int second){
+		this.day = day;
+		this.month = month;
+		this.year = year;
+		this.hour = hour;
+		this.minute = minute;
+		this.second = second;
 	}
-
-	private boolean insert(boolean acao){
-		if(acao == true){
-			return connect;
+	
+	//public getDate(){} Discutir a forma de devolver
+	
+	public void setDevice(String activity){
+		if(activity == "Connect"){
+			this.connect = "Connected";
 		}else{
-			return disconnect;
+			this.connect = "Disconnected";
 		}
 	}
-
-	private boolean logon(boolean acao){
-		if(acao == true){
-			return logon;
-		}else{
-			return logoff;
-		}
-	}
-
-	private void email(){
-		ArrayList<Usuario> email = new ArrayList<Usuario>();
-
-	}
-
 	
-	private boolean http(boolean acesso){
-		if(acesso == true){
-			return on;
-		}else{
-			return off;
-		}
+	public String getDevice(){
+		return connect;
 	}
 
-	public String getIdAtividade() {
-		return idAtividade;
+	public void setLogon(String activity){
+		if(activity == "Logon"){
+			this.logon = "Login";
+		}else{
+			this.logon = "Logoff";
+		}
 	}
-	public void setIdAtividade(String idAtividade) {
-		this.idAtividade = idAtividade;
+	
+	public String getLogon(){
+		return logon;
 	}
-	public Device getDeviceUsado() {
-		return deviceUsado;
+
+	public void setHttp(String site){
+		this.access = site;
 	}
-	public void setDeviceUsado(Device deviceUsado) {
-		this.deviceUsado = deviceUsado;
+	
+	public String getHttp(){
+		return access;
 	}
-	}*/
+	
+	public void setPc(String pc){
+		this.pc = pc;
+	}
+	
+	public String getPc(){
+		return pc;
+	}
 }

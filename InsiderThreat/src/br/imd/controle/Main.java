@@ -9,10 +9,10 @@ public class Main extends LeituraLog{
 		String csvHTTP = ("Dados/http-sumarizado.csv");
 		String csvLDAP = ("Dados/ldap.csv");
 		
-		//leituraArquivoLogon(csvLogon);
+		leituraArquivoLDAP(csvLDAP);
+		leituraArquivoLogon(csvLogon);
 		//leituraArquivoDevice(csvDevice);
-		leituraArquivoHTTP(csvHTTP);
-		//leituraArquivoLDAP(csvLDAP);
+		//leituraArquivoHTTP(csvHTTP);
 		
 		/**
 		 * Método principal sem interface gráfica

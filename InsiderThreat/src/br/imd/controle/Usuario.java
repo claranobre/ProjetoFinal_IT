@@ -1,18 +1,99 @@
 package br.imd.controle;
 
-public class Usuario extends LeituraLog {
+import java.util.ArrayList;
+
+public class Usuario{
+	
+	private String name;
+	private String user_ID;
+	private String domain;
+	private String email;
+	private String role;	
+	private ArrayList<Atividades> atividades = new ArrayList<Atividades>();
 	
 	public Usuario(){
-		/*RespostaLog.USER_ID;
-		RespostaLog.EMPLOYEE_NAME;
-		RespostaLog.EMAIL;
-		RespostaLog.DOMAIN;
-		respostaLog.ROLE;*/
-			
+	}
+	
+	public void diaCorrente(){}
+	
+	public void anteriores(){}
+	
+	public void suspeitas(){}
+	
+	public void setUsuario(String name, String user_ID, String domain, String email, String role){
+		this.name = name;
+		this.user_ID = user_ID;
+		this.domain = domain;
+		this.email = email;
+		this.role = role;
 	}
 
-	public static void main(String[] args){
-		String csvLDAP = ("Dados/ldap.csv");
-		leituraArquivoLDAP(csvLDAP);
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getUser_ID() {
+		return user_ID;
+	}
+
+	public void setUser_ID(String user_ID) {
+		this.user_ID = user_ID;
+	}
+
+	public String getDomain() {
+		return domain;
+	}
+
+	public void setDomain(String domain) {
+		this.domain = domain;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	public void newActivityDevice(String pc, String connect){
+		Atividades device = new Atividades();
+		device.setPc(pc);
+		device.setDevice(connect);
+		atividades.add(device);
+	}
+	
+	public void newActivityLogon(String pc, String logon){
+		Atividades logons = new Atividades();
+		logons.setPc(pc);
+		logons.setLogon(logon);
+		atividades.add(logons);
+	}
+	
+	public void newActivityHttp(String pc, String http){
+		Atividades https = new Atividades();
+		https.setPc(pc);
+		https.setHttp(http);
+		atividades.add(https);
+	}
+	
+	public void imprimirAtividades(){
+		for (int i = 0; i < atividades.size(); i++){
+			System.out.println("PC: "+ atividades.get(i).getPc() + 
+					" Atividade: " + atividades.get(i).getLogon());
+			
+		}
 	}
 }
