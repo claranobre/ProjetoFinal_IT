@@ -38,7 +38,6 @@ public class Atividades extends RespostaLog{
 				System.out.println("ID incorreto");
 			}
 		}
-<<<<<<< HEAD
 
 	}
 
@@ -84,7 +83,5 @@ public class Atividades extends RespostaLog{
 	public void setDeviceUsado(Device deviceUsado) {
 		this.deviceUsado = deviceUsado;
 	}
-=======
 	}*/
->>>>>>> 3ac37dc0158ac83e5f13c26b4248999adb06bf72
 }
