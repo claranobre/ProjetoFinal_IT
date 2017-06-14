@@ -1,40 +1,44 @@
 package br.imd.controle;
 
-public class Atividades extends LeituraLog{
+import java.util.ArrayList;
+
+public class Atividades extends RespostaLog{
 
 	private String idAtividade;
-	private Device deviceUsado;
+	private String deviceUsado;
+	
+	private ArrayList<String> diasSemana;
+	
+	
+	public void diaCorrente(){}
+	
+	public void anteriores(){}
+	
+	public void suspeitas(){}
 
 	
-	public void logAnalyzer(){
-		LeituraLog leitor = new LeituraLog();
-	}
+	public void AnalisadorDeLog(){}
 
 	public void acaoUsuario(){
 		if(idAtividade == ACTIVITY_DEVICE){
-			if(ACTIVITY_DEVICE == connect){
-				dados.add(idAtividade);
-				insert();
+			if(deviceActivity == connect){
+				
 			}
-			if(ACTIVITY_DEVICE == disconnect){
-				dados.add(idAtividade);	
-				insert();
+			if(deviceActivity == disconnect){
+
 			}else{
 				System.out.println("ID incorreto");
 			}
 		}
 		if(idAtividade == ACTIVITY_LOGON){
-			if(ACTIVITY_LOGON == logon){
-				dados.add(idAtividade);
-				logon();
+			if(logonActivity == logon){
 			}
-			if(ACTIVITY_LOGON == logoff){
-				dados.add(idAtividade);
-				logon();
+			if(logonActivity == logoff){
 			}else{
 				System.out.println("ID incorreto");
 			}
 		}
+<<<<<<< HEAD
 
 	}
 
@@ -80,4 +84,7 @@ public class Atividades extends LeituraLog{
 	public void setDeviceUsado(Device deviceUsado) {
 		this.deviceUsado = deviceUsado;
 	}
+=======
+	}*/
+>>>>>>> 3ac37dc0158ac83e5f13c26b4248999adb06bf72
 }

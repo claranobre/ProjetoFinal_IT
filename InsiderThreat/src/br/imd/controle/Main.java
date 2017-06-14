@@ -18,6 +18,7 @@ public class Main extends LeituraLog{
 		 * Método principal sem interface gráfica
 		 */
 		
+<<<<<<< HEAD
 		//Tree raiz = new Tree();
 		//raiz.insereUsuario();
 
@@ -28,6 +29,10 @@ public class Main extends LeituraLog{
 		System.out.println("Pos Ordem: ");
 		raiz.posfixado(raiz);
 	*/
+=======
+		Tree raiz = new Tree();
+		//raiz.insereDados();
+>>>>>>> 3ac37dc0158ac83e5f13c26b4248999adb06bf72
 	}
 
 }

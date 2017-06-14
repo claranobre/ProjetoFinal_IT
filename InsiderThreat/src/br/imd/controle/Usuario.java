@@ -3,11 +3,11 @@ package br.imd.controle;
 public class Usuario extends LeituraLog {
 	
 	public Usuario(){
-		RespostaLog.USER_ID;
+		/*RespostaLog.USER_ID;
 		RespostaLog.EMPLOYEE_NAME;
 		RespostaLog.EMAIL;
 		RespostaLog.DOMAIN;
-		respostaLog.ROLE;
+		respostaLog.ROLE;*/
 			
 	}
 

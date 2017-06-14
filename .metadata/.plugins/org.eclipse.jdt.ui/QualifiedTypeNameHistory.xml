@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="org.jfree.chart.plot.PlotOrientation"/>
+<fullyQualifiedTypeName name="org.jfree.chart.ChartFactory"/>
+<fullyQualifiedTypeName name="org.jfree.data.category.DefaultCategoryDataset"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="org.jfree.chart.ChartUtilities"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="org.jfree.chart.ChartPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="org.jfree.data.statistics.HistogramDataset"/>
+<fullyQualifiedTypeName name="org.jfree.data.xy.IntervalXYDataset"/>
+<fullyQualifiedTypeName name="org.jfree.chart.renderer.xy.XYBarRenderer"/>
+<fullyQualifiedTypeName name="org.jfree.chart.plot.XYPlot"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.jfree.ui.RefineryUtilities"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="br.imd.controle.LeituraLog"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

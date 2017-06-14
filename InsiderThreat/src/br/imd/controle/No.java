@@ -2,17 +2,14 @@ package br.imd.controle;
 
 public class No {
 	
-	private Usuario usuario;
+	private Atividades acao;
 
-    public No(Usuario usuario) {
-        this.usuario = usuario;
+    public No(Atividades acao) {
+        this.acao = acao;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }    
+	public int acaoUsuario() {
+		// TODO Auto-generated method stub
+		return 0;
+	} 
 }
