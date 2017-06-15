@@ -158,11 +158,7 @@ public class RespostaLog extends Usuario{
 			dias[valor]++;
 		*/
 	}
-	/**
-	 * Método divisorUser irá retornar o usuário excluindo a String 'DTAA'
-	 * @param user
-	 * @return
-	 */
+		
 	public static String divisorUser(String user){
 		String divisor2 = "/";
 		Scanner s = new Scanner(user).useDelimiter(divisor2);

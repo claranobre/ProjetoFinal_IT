@@ -139,34 +139,21 @@ public class Usuario{
 		device.setDevice(connect);
 		atividades.add(device);
 	}
-	/**
-	 * Método newActivityLogon armazena a atividade na ArrayList que o usuário
-	 * executou no device analisado, salvando também a ID do device
-	 * @param pc
-	 * @param logon
-	 */
+	
 	public void newActivityLogon(String pc, String logon){
 		Atividades logons = new Atividades();
 		logons.setPc(pc);
 		logons.setLogon(logon);
 		atividades.add(logons);
 	}
-	/**
-	 * Método newActivityHttp armazena os sites acessados pelo usuário, salvando
-	 * também a ID do device utilizado
-	 * @param pc
-	 * @param http
-	 */
+	
 	public void newActivityHttp(String pc, String http){
 		Atividades https = new Atividades();
 		https.setPc(pc);
 		https.setHttp(http);
 		atividades.add(https);
 	}
-	/**
-	 * Método imprimirAtividades imprime as atividades executadas pelo usuário buscado
-	 * @return void
-	 */
+	
 	public void imprimirAtividades(){
 		for (int i = 0; i < atividades.size(); i++){
 			if(atividades.get(i).isUsedConnect()){

@@ -58,12 +58,7 @@ public class RespostaLog extends Usuario{
 			}
 		}
 	}
-	/**
-	 * Método respostaArquivoDevice irá armazenar em uma ArrayList os valores
-	 * lidos no arquivo 'device.csv'
-	 * @param leitor
-	 * @throws IOException
-	 */
+	
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -81,11 +76,7 @@ public class RespostaLog extends Usuario{
 			}	
 		}
 	}
-	/**
-	 * Método irá retornar os sites acessados pelo usuário
-	 * @param leitor
-	 * @throws IOException
-	 */
+	
 	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -107,11 +98,7 @@ public class RespostaLog extends Usuario{
 			}
 		}		
 	}
-	/**
-	 * Método respostaArquivoLDAP irá retornar os dados dos usuários existentes
-	 * @param leitor
-	 * @throws IOException
-	 */
+
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -123,10 +110,7 @@ public class RespostaLog extends Usuario{
 			users.add(novo);
 		}
 	}
-	/**
-	 * Método divisorDate irá armazenar as datas excluindo os caracteres especiais
-	 * @param date
-	 */
+	
 	public static void divisorDate(ArrayList<String> date){
 		String divisor2 = "/";
 		String divisor3 = ":";
@@ -158,11 +142,7 @@ public class RespostaLog extends Usuario{
 			dias[valor]++;
 		*/
 	}
-	/**
-	 * Método divisorUser irá retornar o usuário excluindo a String 'DTAA'
-	 * @param user
-	 * @return
-	 */
+		
 	public static String divisorUser(String user){
 		String divisor2 = "/";
 		Scanner s = new Scanner(user).useDelimiter(divisor2);

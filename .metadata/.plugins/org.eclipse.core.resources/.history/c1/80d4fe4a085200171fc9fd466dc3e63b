@@ -45,7 +45,7 @@ public class Atividades{
 	 * @param activity
 	 * @return void
 	 */
-
+	
 	public void setDevice(String activity){
 		usedConnect = true;
 		if(activity.equals(connect)){
@@ -54,21 +54,21 @@ public class Atividades{
 			this.connect = "Disconnected";
 		}
 	}
-
+	
 	/**
 	 * Método getDevice
 	 * @return connect
 	 */
-
+	
 	public String getDevice(){
 		return connect;
 	}
-
+	
 	/**
 	 * Método setLogon para verificar se a atividade de login é "logon" ou "logoff"
 	 * @param activity
 	 */
-
+	
 	public void setLogon(String activity){
 		usedLogon = true;
 		if(activity.equals(logon)){
@@ -77,49 +77,46 @@ public class Atividades{
 			this.logon = "Logoff";
 		}
 	}
-
+	
 	/**
 	 * Método getLogon
 	 * @return logon
 	 */
-
+	
 	public String getLogon(){
 		return logon;
 	}
-
+	
 	/**
 	 * Método setHttp
 	 * @param site
 	 * @return void
 	 */
-
+	
 	public void setHttp(String site){
 		usedHttp = true;
 		this.access = site;
 	}
-
+	
 	/**
 	 * Método getHttp
 	 * @return access
 	 */
-
+	
 	public String getHttp(){
 		return access;
 	}
-
+	
 	/**
 	 * Método setPc
 	 * @param pc
 	 * @return void
 	 */
-
+	
 	public void setPc(String pc){
 		this.pc = pc;
 	}
-	/**
-	 * Método getPc
-	 * @return pc
-	 */
+
 	public String getPc(){
 		return pc;
 	}

@@ -18,15 +18,9 @@ public class RespostaLog extends Usuario{
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, DOMAIN = 2, EMAIL = 3, ROLE = 4;
 	private static final int MES = 0, DIA = 1, ANO = 2; 
 	private static final int HORA = 0, MINUTO = 1, SEGUNDO = 3;
-	/**
-	 * ArrayList de usuários existentes no arquivo 'ldap.csv'
-	 */
 	static ArrayList<Usuario> users = new ArrayList<Usuario>();
 	
-	/**
-	 * caracteres especiais que precisamos ler das strings de cada coluna
-	 * e armazenar seus valores sem esses caracteres
-	 */
+	
 	String line = "";
 	String divisor = ",";
 	String divisor2 = "/";
@@ -35,12 +29,7 @@ public class RespostaLog extends Usuario{
 	String divisor5 = " ";
 	
 	
-	/**
-	 * Método respostaArquivoLogon irá retornar as Strings existentes no arquivo
-	 * 'logon-sumarizado.csv'
-	 * @param leitor
-	 * @throws IOException
-	 */
+	
 	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -58,12 +47,7 @@ public class RespostaLog extends Usuario{
 			}
 		}
 	}
-	/**
-	 * Método respostaArquivoDevice irá armazenar em uma ArrayList os valores
-	 * lidos no arquivo 'device.csv'
-	 * @param leitor
-	 * @throws IOException
-	 */
+	
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -81,11 +65,7 @@ public class RespostaLog extends Usuario{
 			}	
 		}
 	}
-	/**
-	 * Método irá retornar os sites acessados pelo usuário
-	 * @param leitor
-	 * @throws IOException
-	 */
+	
 	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -107,11 +87,7 @@ public class RespostaLog extends Usuario{
 			}
 		}		
 	}
-	/**
-	 * Método respostaArquivoLDAP irá retornar os dados dos usuários existentes
-	 * @param leitor
-	 * @throws IOException
-	 */
+
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
@@ -123,10 +99,7 @@ public class RespostaLog extends Usuario{
 			users.add(novo);
 		}
 	}
-	/**
-	 * Método divisorDate irá armazenar as datas excluindo os caracteres especiais
-	 * @param date
-	 */
+	
 	public static void divisorDate(ArrayList<String> date){
 		String divisor2 = "/";
 		String divisor3 = ":";
@@ -158,11 +131,7 @@ public class RespostaLog extends Usuario{
 			dias[valor]++;
 		*/
 	}
-	/**
-	 * Método divisorUser irá retornar o usuário excluindo a String 'DTAA'
-	 * @param user
-	 * @return
-	 */
+		
 	public static String divisorUser(String user){
 		String divisor2 = "/";
 		Scanner s = new Scanner(user).useDelimiter(divisor2);
