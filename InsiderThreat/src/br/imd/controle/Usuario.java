@@ -100,8 +100,16 @@ public class Usuario{
 	
 	public void imprimirAtividades(){
 		for (int i = 0; i < atividades.size(); i++){
-			System.out.println("PC: "+ atividades.get(i).getPc() + 
-					" Atividade: " + atividades.get(i).getLogon());
+			if(atividades.get(i).isUsedConnect()){
+				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
+			}
+			else if(atividades.get(i).isUsedLogon()){
+				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getLogon());
+			}
+			else{
+				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getHttp());
+			}
+			
 			
 		}
 	}

@@ -11,8 +11,8 @@ public class Main extends LeituraLog{
 		
 		leituraArquivoLDAP(csvLDAP);
 		leituraArquivoLogon(csvLogon);
-		//leituraArquivoDevice(csvDevice);
-		//leituraArquivoHTTP(csvHTTP);
+		leituraArquivoDevice(csvDevice);
+		leituraArquivoHTTP(csvHTTP);
 		
 		/**
 		 * Método principal sem interface gráfica

@@ -28,62 +28,59 @@ public class RespostaLog extends Usuario{
 	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
+		String user, pc;
 
 		while((line = leitor.readLine()) != null){
 			String[] logon = line.split(divisor);
-			String user, pc;
 			//divisorDate(DATE_LOGON);
 			user = divisorUser(logon[USER_LOGON]);
 			pc = divisorPc(logon[PC_LOGON]);
-			for(int i = 1; i < users.size(); i++){
-				System.out.println(users.get(i).getUser_ID());
-				if(users.get(i).getUser_ID() == user){
-					users.get(i).newActivityDevice(pc, user);
-					System.out.println("opa");
+			for(int i = 0; i < users.size(); i++){
+				if(user.equals(users.get(i).getUser_ID())){
+					users.get(i).newActivityLogon(pc, logon[ACTIVITY_LOGON]);
 				}
 			}
 		}
-		
 	}
 	
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		ArrayList<String> deviceId = new ArrayList<String>();
-		ArrayList<String> deviceDate = new ArrayList<String>();
-		ArrayList<String> deviceUser = new ArrayList<String>();
-		ArrayList<String> devicePc = new ArrayList<String>();
-		ArrayList<String> deviceActivity = new ArrayList<String>();
+		String user, pc;
 				
 		while((line = leitor.readLine()) != null){
 			String[] device = line.split(divisor);
-			deviceId.add(device[ID_DEVICE]);
-			deviceDate.add(device[DATE_DEVICE]);
-			deviceUser.add(device[USER_DEVICE]);
-			devicePc.add(device[PC_DEVICE]);
-			deviceActivity.add(device[ACTIVITY_DEVICE]);
+			//divisorDate(DATE_DEVICE);
+			user = divisorUser(device[USER_DEVICE]);
+			pc = divisorPc(device[PC_DEVICE]);
+			for(int i = 0; i < users.size(); i++){
+				if(user.equals(users.get(i).getUser_ID())){
+					users.get(i).newActivityDevice(pc, device[ACTIVITY_DEVICE]);
+				}
+			}	
 		}
-		divisorDate(deviceDate);
 	}
 	
 	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		ArrayList<String> httpId = new ArrayList<String>();
-		ArrayList<String> httpDate = new ArrayList<String>();
-		ArrayList<String> httpUser = new ArrayList<String>();
-		ArrayList<String> httpPc = new ArrayList<String>();
-		ArrayList<String> httpActivity = new ArrayList<String>();
-		
+		String user, pc;
+				
 		while((line = leitor.readLine()) != null){
 			String[] http = line.split(divisor);
-			httpId.add(http[ID_HTTP]);
-			httpDate.add(http[DATE_HTTP]);
-			httpUser.add(http[USER_HTTP]);
-			httpPc.add(http[PC_HTTP]);
-			httpActivity.add(http[ACTIVITY_HTTP]);
-		}
-		divisorDate(httpDate);
+			//divisorDate(DATE_HTTP);
+			user = divisorUser(http[USER_HTTP]);
+			pc = divisorPc(http[PC_HTTP]);
+			for(int i = 0; i < users.size(); i++){
+				if(user.equals(users.get(i).getUser_ID())){
+					users.get(i).newActivityHttp(pc, http[ACTIVITY_HTTP]);
+				}
+			}
+			for(int i = 0; i < users.size(); i++){
+				System.out.println("Usuario: " + users.get(i).getUser_ID() +" Nome: " + users.get(i).getName());
+				users.get(i).imprimirAtividades();
+			}
+		}		
 	}
 
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
@@ -105,7 +102,6 @@ public class RespostaLog extends Usuario{
 		ArrayList<String> diasDate = new ArrayList<String>();
 		ArrayList<String> horasDate = new ArrayList<String>();
 		String input;
-		int day, month, year, hour, minute, second;
 		
 		for (int i = 1; i < date.size(); i++){
 			input = date.get(i);
@@ -118,10 +114,7 @@ public class RespostaLog extends Usuario{
 		for (int i = 0; i < diasDate.size(); i++){
 			input = diasDate.get(i);
 			Scanner s = new Scanner(input).useDelimiter(divisor2);
-			int valor = Integer.parseInt(s.next());
-			//
-			//valor = Integer.parseInt(s.next());
-			//dias[valor-1]++;
+			
 		}
 		
 		

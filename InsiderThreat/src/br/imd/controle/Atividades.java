@@ -2,11 +2,14 @@ package br.imd.controle;
 
 public class Atividades{
 	
-	private String connect;
-	private String logon;
+	private String connect = "Connect";
+	private String logon = "Logon";
 	private String access;
 	private int day, month, year, hour, minute, second;
 	private String pc;
+	private boolean usedLogon = false;
+	private boolean usedConnect = false;
+	private boolean usedHttp = false;
 	
 	public void setDate(int day, int month, int year, int hour, int minute, int second){
 		this.day = day;
@@ -20,7 +23,8 @@ public class Atividades{
 	//public getDate(){} Discutir a forma de devolver
 	
 	public void setDevice(String activity){
-		if(activity == "Connect"){
+		usedConnect = true;
+		if(activity.equals(connect)){
 			this.connect = "Connected";
 		}else{
 			this.connect = "Disconnected";
@@ -32,8 +36,9 @@ public class Atividades{
 	}
 
 	public void setLogon(String activity){
-		if(activity == "Logon"){
-			this.logon = "Login";
+		usedLogon = true;
+		if(activity.equals(logon)){
+			this.logon = "Logon";
 		}else{
 			this.logon = "Logoff";
 		}
@@ -44,6 +49,7 @@ public class Atividades{
 	}
 
 	public void setHttp(String site){
+		usedHttp = true;
 		this.access = site;
 	}
 	
@@ -57,5 +63,17 @@ public class Atividades{
 	
 	public String getPc(){
 		return pc;
+	}
+
+	public boolean isUsedLogon() {
+		return usedLogon;
+	}
+
+	public boolean isUsedConnect() {
+		return usedConnect;
+	}
+
+	public boolean isUsedHttp() {
+		return usedHttp;
 	}
 }
