@@ -36,15 +36,14 @@ public class RespostaLog extends Usuario{
 			user = divisorUser(logon[USER_LOGON]);
 			pc = divisorPc(logon[PC_LOGON]);
 			for(int i = 1; i < users.size(); i++){
-				if(users.get(i).getUser_ID() == logon[USER_LOGON]){
-					users.get(i).newActivityDevice(logon[PC_LOGON], logon[ACTIVITY_LOGON]);
+				System.out.println(users.get(i).getUser_ID());
+				if(users.get(i).getUser_ID() == user){
+					users.get(i).newActivityDevice(pc, user);
+					System.out.println("opa");
 				}
 			}
-			
-			for(int i = 1; i < users.size(); i++){
-				users.get(i).imprimirAtividades();
-			}
 		}
+		
 	}
 	
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
@@ -137,22 +136,20 @@ public class RespostaLog extends Usuario{
 		
 	public static String divisorUser(String user){
 		String divisor2 = "/";
-		for (int i = 0; i < user.length(); i++){
-			Scanner s = new Scanner(user).useDelimiter(divisor2);
-			user = s.next();
-			//user = s.next();
-		}
+		Scanner s = new Scanner(user).useDelimiter(divisor2);
+		user = s.next();
+		user = s.next();
+		s.close();
 		return user;
 	}
 		
 	
 	public static String divisorPc(String pc){
 		String divisor4 = "-";
-		for (int i = 0; i < pc.length(); i++){
-			Scanner s = new Scanner(pc).useDelimiter(divisor4);
-			pc = s.next();
-			//pc = s.next();
-		}
+		Scanner s = new Scanner(pc).useDelimiter(divisor4);
+		pc = s.next();
+		pc = s.next();
+		s.close();
 		return pc;
 	}
 	
