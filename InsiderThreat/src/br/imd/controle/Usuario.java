@@ -1,18 +1,27 @@
 package br.imd.controle;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author Ana Clara e Felipe Gilberto
+ * Classe Usuario, raíz da árvore
+ *
+ */
 public class Usuario{
-	
 	private String name;
 	private String user_ID;
 	private String domain;
 	private String email;
 	private String role;	
+	/**
+	 * ArrayList de Atividades para poder gerenciar o que cada usuário executou
+	 */
 	private ArrayList<Atividades> atividades = new ArrayList<Atividades>();
 	
-	public Usuario(){
-	}
+	/**
+	 * Método Construtor vazio
+	 */
+	public Usuario(){}
 	
 	public void diaCorrente(){}
 	

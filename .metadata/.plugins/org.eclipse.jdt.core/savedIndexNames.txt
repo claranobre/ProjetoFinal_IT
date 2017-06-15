@@ -6,15 +6,14 @@ INDEX VERSION 1.130+/home/clara/Documents/UFRN/Linguagem de Programacao II/2017.
 1029917492.index
 1284967388.index
 2474869233.index
-2148941566.index
 2930269135.index
+2148941566.index
 2848559958.index
-2206780915.index
 4293592022.index
 3668019510.index
 2721752785.index
 295811365.index
 1100032972.index
 713154163.index
-714218214.index
 324038622.index
+714218214.index
