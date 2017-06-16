@@ -133,10 +133,12 @@ public class Usuario{
 	 * @param pc
 	 * @param connect
 	 */
-	public void newActivityDevice(String pc, String connect){
+	public void newActivityDevice(String id, String pc, String connect, int month, int day, int year, int hour, int minute, int second){
 		Atividades device = new Atividades();
+		device.setId(id);
 		device.setPc(pc);
 		device.setDevice(connect);
+		device.setDate(month, day, year, hour, minute, second);
 		atividades.add(device);
 	}
 	/**
@@ -145,10 +147,12 @@ public class Usuario{
 	 * @param pc
 	 * @param logon
 	 */
-	public void newActivityLogon(String pc, String logon){
+	public void newActivityLogon(String id, String pc, String logon, int month, int day, int year, int hour, int minute, int second){
 		Atividades logons = new Atividades();
+		logons.setId(id);
 		logons.setPc(pc);
 		logons.setLogon(logon);
+		logons.setDate(month, day, year, hour, minute, second);
 		atividades.add(logons);
 	}
 	/**
@@ -157,10 +161,12 @@ public class Usuario{
 	 * @param pc
 	 * @param http
 	 */
-	public void newActivityHttp(String pc, String http){
+	public void newActivityHttp(String id, String pc, String http, int month, int day, int year, int hour, int minute, int second){
 		Atividades https = new Atividades();
+		https.setId(id);
 		https.setPc(pc);
 		https.setHttp(http);
+		https.setDate(month, day, year, hour, minute, second);
 		atividades.add(https);
 	}
 	/**
@@ -170,13 +176,13 @@ public class Usuario{
 	public void imprimirAtividades(){
 		for (int i = 0; i < atividades.size(); i++){
 			if(atividades.get(i).isUsedConnect()){
-				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
+				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
 			}
 			else if(atividades.get(i).isUsedLogon()){
-				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getLogon());
+				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getLogon());
 			}
 			else{
-				System.out.println("PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getHttp());
+				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getHttp());
 			}
 			
 			

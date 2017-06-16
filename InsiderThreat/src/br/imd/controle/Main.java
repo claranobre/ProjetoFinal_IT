@@ -1,5 +1,5 @@
 package br.imd.controle;
-
+import br.imd.controle.RespostaLog;
 
 public class Main extends LeituraLog{
 
@@ -13,6 +13,10 @@ public class Main extends LeituraLog{
 		leituraArquivoLogon(csvLogon);
 		leituraArquivoDevice(csvDevice);
 		leituraArquivoHTTP(csvHTTP);
+		buscaUsuario("ABL0836"); //Users Random
+		System.out.println();
+		buscaUsuario("CBC0653");
+		
 		
 		/**
 		 * Método principal sem interface gráfica
@@ -27,9 +31,9 @@ public class Main extends LeituraLog{
 		raiz.prefixado(raiz);
 		System.out.println("Pos Ordem: ");
 		raiz.posfixado(raiz);
-	*/
 		Tree raiz = new Tree();
-		//raiz.insereDados();
+		raiz.insereDados();
+		*/
 	}
 
 }

@@ -16,8 +16,7 @@ public class RespostaLog extends Usuario{
 	private static final int ID_HTTP = 0, DATE_HTTP = 1, USER_HTTP = 2, PC_HTTP = 3, ACTIVITY_HTTP = 4;
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, DOMAIN = 2, EMAIL = 3, ROLE = 4;
-	private static final int MES = 0, DIA = 1, ANO = 2; 
-	private static final int HORA = 0, MINUTO = 1, SEGUNDO = 3;
+	private static int mes, dia, ano, hora, minuto, segundo;
 	/**
 	 * ArrayList de usuários existentes no arquivo 'ldap.csv'
 	 */
@@ -44,16 +43,17 @@ public class RespostaLog extends Usuario{
 	public static void respostaArquivoLogon(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		String user, pc;
+		String user, pc, id;
 
 		while((line = leitor.readLine()) != null){
 			String[] logon = line.split(divisor);
-			//divisorDate(DATE_LOGON);
+			id = logon[ID_LOGON];
+			divisorDate(logon[DATE_LOGON]);
 			user = divisorUser(logon[USER_LOGON]);
 			pc = divisorPc(logon[PC_LOGON]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityLogon(pc, logon[ACTIVITY_LOGON]);
+					users.get(i).newActivityLogon(id, pc, logon[ACTIVITY_LOGON], mes, dia, ano, hora, minuto, segundo);
 				}
 			}
 		}
@@ -67,16 +67,17 @@ public class RespostaLog extends Usuario{
 	public static void respostaArquivoDevice(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		String user, pc;
+		String user, pc, id;
 				
 		while((line = leitor.readLine()) != null){
 			String[] device = line.split(divisor);
-			//divisorDate(DATE_DEVICE);
+			id = device[ID_DEVICE];
+			divisorDate(device[DATE_DEVICE]);
 			user = divisorUser(device[USER_DEVICE]);
 			pc = divisorPc(device[PC_DEVICE]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityDevice(pc, device[ACTIVITY_DEVICE]);
+					users.get(i).newActivityDevice(id, pc, device[ACTIVITY_DEVICE], mes, dia, ano, hora, minuto, segundo);
 				}
 			}	
 		}
@@ -89,21 +90,18 @@ public class RespostaLog extends Usuario{
 	public static void respostaArquivoHTTP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		String user, pc;
+		String user, pc, id;
 				
 		while((line = leitor.readLine()) != null){
 			String[] http = line.split(divisor);
-			//divisorDate(DATE_HTTP);
+			id = http[ID_HTTP];
+			divisorDate(http[DATE_HTTP]);
 			user = divisorUser(http[USER_HTTP]);
 			pc = divisorPc(http[PC_HTTP]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityHttp(pc, http[ACTIVITY_HTTP]);
+					users.get(i).newActivityHttp(id, pc, http[ACTIVITY_HTTP], mes, dia, ano, hora, minuto, segundo);
 				}
-			}
-			for(int i = 0; i < users.size(); i++){
-				System.out.println("Usuario: " + users.get(i).getUser_ID() +" Nome: " + users.get(i).getName());
-				users.get(i).imprimirAtividades();
 			}
 		}		
 	}
@@ -127,36 +125,26 @@ public class RespostaLog extends Usuario{
 	 * Método divisorDate irá armazenar as datas excluindo os caracteres especiais
 	 * @param date
 	 */
-	public static void divisorDate(ArrayList<String> date){
+	public static void divisorDate(String date){
 		String divisor2 = "/";
 		String divisor3 = ":";
 		String divisor5 = " ";
-		ArrayList<String> diasDate = new ArrayList<String>();
-		ArrayList<String> horasDate = new ArrayList<String>();
-		String input;
-		
-		for (int i = 1; i < date.size(); i++){
-			input = date.get(i);
-			Scanner s = new Scanner(input).useDelimiter(divisor5);
-			diasDate.add(s.next());
-			horasDate.add(s.next());
-		}
-		
-		
-		for (int i = 0; i < diasDate.size(); i++){
-			input = diasDate.get(i);
-			Scanner s = new Scanner(input).useDelimiter(divisor2);
+		String dias, horas;
 			
-		}
-		
-		
-		/*for (int i = 0; i < date.size(); i++){
-			String[] data = line.split(divisor3);
-			int valor = Integer.parseInt(data[HORA]);
-			[valor]++;
-			valor = Integer.parseInt(data[DIA]);
-			dias[valor]++;
-		*/
+		Scanner s = new Scanner(date).useDelimiter(divisor5);
+		dias = s.next();
+		horas = s.next();
+		s.close();
+		s = new Scanner(dias).useDelimiter(divisor2);
+		mes = Integer.parseInt(s.next());
+		dia = Integer.parseInt(s.next());
+		ano = Integer.parseInt(s.next());
+		s.close();
+		s = new Scanner(horas).useDelimiter(divisor3);
+		hora = Integer.parseInt(s.next());
+		minuto = Integer.parseInt(s.next());
+		segundo = Integer.parseInt(s.next());
+		s.close();
 	}
 	/**
 	 * Método divisorUser irá retornar o usuário excluindo a String 'DTAA'
@@ -182,15 +170,12 @@ public class RespostaLog extends Usuario{
 		return pc;
 	}
 	
-	public static void imprimirCampo(ArrayList<String> campo){
-		for (int i = 0; i < campo.size(); i++){
-			System.out.println(campo.get(i));
-		}
-	}
-		
-	public static void imprimirLista(ArrayList<Usuario> lista){
-		for (int i = 1; i < lista.size(); i++){
-			System.out.println("UserID: "+ lista.get(i).getName());
+	public static void buscaUsuario(String user){
+		for(int i = 0; i < users.size(); i++){
+			if(users.get(i).getUser_ID().equals(user)){
+				System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+				users.get(i).imprimirAtividades();
+			}
 		}
 	}
 }

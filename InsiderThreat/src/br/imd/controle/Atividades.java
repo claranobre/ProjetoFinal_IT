@@ -12,7 +12,9 @@ public class Atividades{
 	private String connect = "Connect";
 	private String logon = "Logon";
 	private String access;
+	private String id;
 	private int day, month, year, hour, minute, second;
+	private String dayInfo;
 	private String pc;
 	private boolean usedLogon = false;
 	private boolean usedConnect = false;
@@ -29,16 +31,24 @@ public class Atividades{
 	 * @return void
 	 */
 
-	public void setDate(int day, int month, int year, int hour, int minute, int second){
+	public void setDate(int month, int day, int year, int hour, int minute, int second){
 		this.day = day;
 		this.month = month;
 		this.year = year;
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
+		String divisor = "/";
+		String divisor2 = ":";
+		String divisor3 = " ";
+				
+		dayInfo = Integer.toString(day) + divisor + Integer.toString(month) + divisor + Integer.toString(year) + divisor3 
+				+ Integer.toString(hour) + divisor2 + Integer.toString(minute) + divisor2 + Integer.toString(second);  
 	}
-
-	//public getDate(){} Discutir a forma de devolver
+	
+	public String getDate(){
+		return dayInfo;
+	}
 
 	/**
 	 * Método setDevice para verificar se a atividade do usuário é "connect" ou "disconnect"
@@ -122,6 +132,14 @@ public class Atividades{
 	 */
 	public String getPc(){
 		return pc;
+	}
+	
+	public void setId(String id){
+		this.id = id;
+	}
+	
+	public String getId(){
+		return id;
 	}
 
 	public boolean isUsedLogon() {
