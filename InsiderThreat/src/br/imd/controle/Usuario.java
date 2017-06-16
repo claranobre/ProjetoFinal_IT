@@ -1,5 +1,6 @@
 package br.imd.controle;
 
+import java.awt.List;
 import java.util.ArrayList;
 /**
  * 
@@ -12,12 +13,36 @@ public class Usuario{
 	private String user_ID;
 	private String domain;
 	private String email;
-	private String role;	
+	private String role;
+	
+	private int contadorLogon =  0;
+	private int contadorLogoff = 0;
+	private int contadorConnect = 0;
+	private int contadorDisconnect = 0;
+	private int contadorHttp = 0;
+	/**
+	 * Matriz bidimensional para armazenar os valores de meses e dias analisados
+	 */
+	//private int contadorAtividades[][] = new int[12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de connect e disconnect do device do usuário
+	 */
+	private int contadorAtividadesConnect[][] = new int [12][31];
+	private int contadorAtividadesDisconnect[][] = new int [12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de logons e logoffs do usuário
+	 */
+	private static int contadorAtividadesLogon[][] = new int [12][31];
+	private static int contadorAtividadesLogoff[][] = new int [12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de sites acessados pelo usuário
+	 */
+	private int contadorAtividadesHttp[][] = new int[12][31];
 	/**
 	 * ArrayList de Atividades para poder gerenciar o que cada usuário executou
 	 */
 	private ArrayList<Atividades> atividades = new ArrayList<Atividades>();
-	
+
 	/**
 	 * Método Construtor vazio
 	 */
@@ -26,7 +51,9 @@ public class Usuario{
 	 * Método para armazenar as atividades que o usuário executou no dia indicado
 	 * @return void
 	 */	
-	public void diaCorrente(){}
+	public static void diaCorrente(int month, int day){
+		System.out.println(contadorAtividadesLogon[month-1][day-1]);
+	}
 	/**
 	 * Método para armazenar as atividades anteriores do usuário
 	 * @return void
@@ -176,16 +203,59 @@ public class Usuario{
 	public void imprimirAtividades(){
 		for (int i = 0; i < atividades.size(); i++){
 			if(atividades.get(i).isUsedConnect()){
-				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
+				if(atividades.get(i).getDevice().equals("Connect")){
+					//contadorConnect++;
+					contadorAtividadesConnect[atividades.get(i).getMonth()-1][atividades.get(i).getDay()-1]++;
+					
+				}
+				else{
+					//contadorDisconnect++;
+					contadorAtividadesDisconnect[atividades.get(i).getMonth()-1][atividades.get(i).getDay()-1]++;
+				}
+				//System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
 			}
 			else if(atividades.get(i).isUsedLogon()){
-				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getLogon());
+				if(atividades.get(i).getLogon().equals("Logon")){
+					contadorLogon++;
+				}
+				else{
+					contadorLogoff++;
+				}
+				//System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getLogon());
 			}
 			else{
-				System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getHttp());
-			}
-			
-			
+				contadorHttp++;
+				//System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getHttp());
+			}			
 		}
+		//System.out.println(contadorConnect);
+		//System.out.println(contadorDisconnect);
+		
+		//System.out.println(contadorLogon);
+		//System.out.println(contadorLogoff);
+		
+		//System.out.println(contadorHttp);
+		for(int i = 0; i < 12; i++){
+			for(int j = 0; j < 31; j++){
+				System.out.print(contadorAtividadesConnect[i][j]+ " | ");
+			}
+			System.out.println();
+		}
+	}
+	
+	/**
+	 * Método(s) Contador(es)
+	 */
+	public void contadorLogon(int month, int day){
+		contadorAtividadesLogon[month-1][day-1]++;
+	}
+	public void contadorLogoff(int month, int day){
+		contadorAtividadesLogoff[month-1][day-1]++;
+	}
+	public void contadorConnect(int month, int day){
+		contadorAtividadesConnect[month-1][day-1]++;
+	}
+	public void contadorDisconnect(int month, int day){
+		contadorAtividadesDisconnect[month-1][day-1]++;
 	}
 }

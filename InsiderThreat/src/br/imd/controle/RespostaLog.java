@@ -54,6 +54,11 @@ public class RespostaLog extends Usuario{
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
 					users.get(i).newActivityLogon(id, pc, logon[ACTIVITY_LOGON], mes, dia, ano, hora, minuto, segundo);
+					if(logon[ACTIVITY_LOGON].equals("Logon")){
+						users.get(i).contadorLogon(mes, dia);
+					}else{
+						users.get(i).contadorLogoff(mes, dia);
+					}
 				}
 			}
 		}
@@ -158,8 +163,7 @@ public class RespostaLog extends Usuario{
 		user = s.next();
 		s.close();
 		return user;
-	}
-		
+	}		
 	
 	public static String divisorPc(String pc){
 		String divisor4 = "-";
@@ -173,7 +177,9 @@ public class RespostaLog extends Usuario{
 	public static void buscaUsuario(String user){
 		for(int i = 0; i < users.size(); i++){
 			if(users.get(i).getUser_ID().equals(user)){
-				System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+				//System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+				//users.get(i).imprimirAtividades();
+				//users.get(i).diaCorrente(01,04);
 				users.get(i).imprimirAtividades();
 			}
 		}

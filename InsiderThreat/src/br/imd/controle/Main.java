@@ -1,6 +1,10 @@
 package br.imd.controle;
 import br.imd.controle.RespostaLog;
 
+/**
+ * Método principal sem interface gráfica
+ */
+
 public class Main extends LeituraLog{
 
 	public static void main(String[] args) {
@@ -13,27 +17,13 @@ public class Main extends LeituraLog{
 		leituraArquivoLogon(csvLogon);
 		leituraArquivoDevice(csvDevice);
 		leituraArquivoHTTP(csvHTTP);
-		buscaUsuario("ABL0836"); //Users Random
-		System.out.println();
-		buscaUsuario("CBC0653");
+		buscaUsuario("CVW0133"); //Users Random
+		//System.out.println();
+		//buscaUsuario("CBC0653");
 		
 		
-		/**
-		 * Método principal sem interface gráfica
-		 */
 		
-		//Tree raiz = new Tree();
-		//raiz.insereUsuario();
-
-		/*System.out.println("Pre Ordem: ");
-		raiz.emordem(raiz);
-		System.out.println("Pre Ordem: ");
-		raiz.prefixado(raiz);
-		System.out.println("Pos Ordem: ");
-		raiz.posfixado(raiz);
-		Tree raiz = new Tree();
-		raiz.insereDados();
-		*/
+		
 	}
 
 }

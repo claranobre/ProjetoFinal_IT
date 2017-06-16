@@ -14,6 +14,7 @@ public class Atividades{
 	private String access;
 	private String id;
 	private int day, month, year, hour, minute, second;
+	
 	private String dayInfo;
 	private String pc;
 	private boolean usedLogon = false;
@@ -30,7 +31,7 @@ public class Atividades{
 	 * @param second
 	 * @return void
 	 */
-
+	
 	public void setDate(int month, int day, int year, int hour, int minute, int second){
 		this.day = day;
 		this.month = month;
@@ -38,16 +39,40 @@ public class Atividades{
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
-		String divisor = "/";
-		String divisor2 = ":";
-		String divisor3 = " ";
+		//String divisor = "/";
+		//String divisor2 = ":";
+		//String divisor3 = " ";
 				
-		dayInfo = Integer.toString(day) + divisor + Integer.toString(month) + divisor + Integer.toString(year) + divisor3 
-				+ Integer.toString(hour) + divisor2 + Integer.toString(minute) + divisor2 + Integer.toString(second);  
+		//dayInfo = Integer.toString(day) + divisor + Integer.toString(month) + divisor + Integer.toString(year) + divisor3 
+			//	+ Integer.toString(hour) + divisor2 + Integer.toString(minute) + divisor2 + Integer.toString(second);  
 	}
-	
+	/**
+	 * Método getDate 
+	 * @return dayInfo
+	 */
 	public String getDate(){
 		return dayInfo;
+	}
+	/**
+	 * Método getDay
+	 * @return day
+	 */
+	public int getDay() {
+		return day;
+	}
+	/**
+	 * Método getMonth
+	 * @return month
+	 */
+	public int getMonth() {
+		return month;
+	}
+	/**
+	 * Método getYear
+	 * @return year
+	 */
+	public int getYear() {
+		return year;
 	}
 
 	/**
@@ -59,9 +84,9 @@ public class Atividades{
 	public void setDevice(String activity){
 		usedConnect = true;
 		if(activity.equals(connect)){
-			this.connect = "Connected";
+			this.connect = "Connect";
 		}else{
-			this.connect = "Disconnected";
+			this.connect = "Disconnect";
 		}
 	}
 

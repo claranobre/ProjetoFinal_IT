@@ -46,20 +46,16 @@ public class GeradorHistograma extends ApplicationFrame{
 		final DefaultCategoryDataset dataset = 
 				new DefaultCategoryDataset();  
 
-		dataset.addValue( 1.0 , logon_user , logon );        
-		dataset.addValue( 3.0 , logon_user , connect );        
-		dataset.addValue( 5.0 , logon_user , logoff ); 
-		dataset.addValue( 5.0 , logon_user , disconnect );           
-
-		dataset.addValue( 5.0 , device , logon );        
+		dataset.addValue( 1.0 , logon_user , logon );                
+		dataset.addValue( 5.0 , logon_user , logoff );          
+       
 		dataset.addValue( 6.0 , device , connect );       
-		dataset.addValue( 10.0 , device , logoff );        
 		dataset.addValue( 4.0 , device , disconnect );
 
-		dataset.addValue( 4.0 , acesso , logon );        
+		/*dataset.addValue( 4.0 , acesso , logon );        
 		dataset.addValue( 2.0 , acesso , connect );        
 		dataset.addValue( 3.0 , acesso , logoff );        
-		dataset.addValue( 6.0 , acesso , disconnect );               
+		dataset.addValue( 6.0 , acesso , disconnect );*/     
 
 		return dataset; 
 	}
