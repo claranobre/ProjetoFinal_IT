@@ -17,13 +17,6 @@ public class Main extends LeituraLog{
 		leituraArquivoLogon(csvLogon);
 		leituraArquivoDevice(csvDevice);
 		leituraArquivoHTTP(csvHTTP);
-		buscaUsuario("CVW0133"); //Users Random
-		//System.out.println();
-		//buscaUsuario("CBC0653");
-		
-		
-		
-		
+		buscaUsuario("CVW0133");
 	}
-
 }

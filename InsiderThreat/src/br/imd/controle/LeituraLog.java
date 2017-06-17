@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * 
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 public class LeituraLog extends RespostaLog{
 	
 	/**
-	 * Método leituraArquivoLogon para ler o arquivo Logon-sumarizado.csv
+	 * Método leituraArquivoLogon para ler o arquivo logon-sumarizado.csv
 	 * @param csvLogon
 	 */
 	public static void leituraArquivoLogon(String csvLogon){
@@ -39,7 +38,7 @@ public class LeituraLog extends RespostaLog{
 	}	
 	
 	/**
-	 * Método leituraArquivoDevice para ler o arquivo Device.csv
+	 * Método leituraArquivoDevice para ler o arquivo device.csv
 	 * @param csvDevice
 	 */
 

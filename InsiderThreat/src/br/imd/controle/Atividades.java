@@ -13,7 +13,8 @@ public class Atividades{
 	private String logon = "Logon";
 	private String access;
 	private String id;
-	private int day, month, year, hour, minute, second;
+	private int day, month, year;
+	private int hour, minute, second;
 	
 	private String dayInfo;
 	private String pc;
@@ -158,23 +159,38 @@ public class Atividades{
 	public String getPc(){
 		return pc;
 	}
-	
+	/**
+	 * Método setID
+	 * @param id
+	 */
 	public void setId(String id){
 		this.id = id;
 	}
-	
+	/**
+	 * Método getId
+	 * @return id
+	 */
 	public String getId(){
 		return id;
 	}
-
+	/**
+	 * Método isUsedLogon
+	 * @return usedLogon
+	 */
 	public boolean isUsedLogon() {
 		return usedLogon;
 	}
-
+	/**
+	 * Método isUsedConnect()
+	 * @return usedConnect
+	 */
 	public boolean isUsedConnect() {
 		return usedConnect;
 	}
-
+	/**
+	 * Método isUsedHttp
+	 * @return usedHttp
+	 */
 	public boolean isUsedHttp() {
 		return usedHttp;
 	}

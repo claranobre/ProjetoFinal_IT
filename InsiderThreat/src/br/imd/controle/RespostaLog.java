@@ -16,7 +16,8 @@ public class RespostaLog extends Usuario{
 	private static final int ID_HTTP = 0, DATE_HTTP = 1, USER_HTTP = 2, PC_HTTP = 3, ACTIVITY_HTTP = 4;
 	private static final int ID_LOGON = 0, DATE_LOGON = 1, USER_LOGON = 2, PC_LOGON = 3, ACTIVITY_LOGON = 4;
 	private static final int EMPLOYEE_NAME = 0, USER_ID = 1, DOMAIN = 2, EMAIL = 3, ROLE = 4;
-	private static int mes, dia, ano, hora, minuto, segundo;
+	private static int month, day, year;
+	private static int hora, minuto, segundo;
 	/**
 	 * ArrayList de usuários existentes no arquivo 'ldap.csv'
 	 */
@@ -53,11 +54,11 @@ public class RespostaLog extends Usuario{
 			pc = divisorPc(logon[PC_LOGON]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityLogon(id, pc, logon[ACTIVITY_LOGON], mes, dia, ano, hora, minuto, segundo);
+					users.get(i).newActivityLogon(id, pc, logon[ACTIVITY_LOGON], month, day, year, hora, minuto, segundo);
 					if(logon[ACTIVITY_LOGON].equals("Logon")){
-						users.get(i).contadorLogon(mes, dia);
+						users.get(i).contadorLogon(month, day);
 					}else{
-						users.get(i).contadorLogoff(mes, dia);
+						users.get(i).contadorLogoff(month, day);
 					}
 				}
 			}
@@ -82,7 +83,7 @@ public class RespostaLog extends Usuario{
 			pc = divisorPc(device[PC_DEVICE]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityDevice(id, pc, device[ACTIVITY_DEVICE], mes, dia, ano, hora, minuto, segundo);
+					users.get(i).newActivityDevice(id, pc, device[ACTIVITY_DEVICE], month, day, year, hora, minuto, segundo);
 				}
 			}	
 		}
@@ -105,7 +106,7 @@ public class RespostaLog extends Usuario{
 			pc = divisorPc(http[PC_HTTP]);
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
-					users.get(i).newActivityHttp(id, pc, http[ACTIVITY_HTTP], mes, dia, ano, hora, minuto, segundo);
+					users.get(i).newActivityHttp(id, pc, http[ACTIVITY_HTTP], month, day, year, hora, minuto, segundo);
 				}
 			}
 		}		
@@ -134,16 +135,16 @@ public class RespostaLog extends Usuario{
 		String divisor2 = "/";
 		String divisor3 = ":";
 		String divisor5 = " ";
-		String dias, horas;
+		String days, horas;
 			
 		Scanner s = new Scanner(date).useDelimiter(divisor5);
-		dias = s.next();
+		days = s.next();
 		horas = s.next();
 		s.close();
-		s = new Scanner(dias).useDelimiter(divisor2);
-		mes = Integer.parseInt(s.next());
-		dia = Integer.parseInt(s.next());
-		ano = Integer.parseInt(s.next());
+		s = new Scanner(days).useDelimiter(divisor2);
+		month = Integer.parseInt(s.next());
+		day = Integer.parseInt(s.next());
+		year = Integer.parseInt(s.next());
 		s.close();
 		s = new Scanner(horas).useDelimiter(divisor3);
 		hora = Integer.parseInt(s.next());
@@ -164,7 +165,11 @@ public class RespostaLog extends Usuario{
 		s.close();
 		return user;
 	}		
-	
+	/**
+	 * Método divisorPC irá retornar a id do pc utilizado ignorando a palavra "PC-" antes da id
+	 * @param pc
+	 * @return
+	 */
 	public static String divisorPc(String pc){
 		String divisor4 = "-";
 		Scanner s = new Scanner(pc).useDelimiter(divisor4);
@@ -173,7 +178,10 @@ public class RespostaLog extends Usuario{
 		s.close();
 		return pc;
 	}
-	
+	/**
+	 * Método de busca do usuário para verificar se um usuário encontra-se na lista e para listar as atividades executadas por ele
+	 * @param user
+	 */
 	public static void buscaUsuario(String user){
 		for(int i = 0; i < users.size(); i++){
 			if(users.get(i).getUser_ID().equals(user)){

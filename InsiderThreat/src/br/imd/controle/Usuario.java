@@ -1,6 +1,5 @@
 package br.imd.controle;
 
-import java.awt.List;
 import java.util.ArrayList;
 /**
  * 
@@ -205,12 +204,12 @@ public class Usuario{
 			if(atividades.get(i).isUsedConnect()){
 				if(atividades.get(i).getDevice().equals("Connect")){
 					//contadorConnect++;
-					contadorAtividadesConnect[atividades.get(i).getMonth()-1][atividades.get(i).getDay()-1]++;
+					contadorAtividadesConnect[atividades.get(i).getMonth() - 1][atividades.get(i).getDay() - 1]++;
 					
 				}
 				else{
 					//contadorDisconnect++;
-					contadorAtividadesDisconnect[atividades.get(i).getMonth()-1][atividades.get(i).getDay()-1]++;
+					contadorAtividadesDisconnect[atividades.get(i).getMonth() - 1][atividades.get(i).getDay() - 1]++;
 				}
 				//System.out.println("Data: " + atividades.get(i).getDate() + " PC: "+ atividades.get(i).getPc() + " Atividade: " + atividades.get(i).getDevice());
 			}
@@ -236,8 +235,10 @@ public class Usuario{
 		
 		//System.out.println(contadorHttp);
 		for(int i = 0; i < 12; i++){
-			for(int j = 0; j < 31; j++){
-				System.out.print(contadorAtividadesConnect[i][j]+ " | ");
+			System.out.println("Mês: " + i);
+			for(int j = 0; j < 31 ; j++){
+				System.out.println("Dia: " + j);
+				System.out.println("Atividades: " + contadorAtividadesConnect[i][j]);
 			}
 			System.out.println();
 		}
