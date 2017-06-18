@@ -67,7 +67,7 @@ public class Tree{
 	}
 
 	public void insereAcao(){
-		Atividades acao = new Atividades();
+		Atividade acao = new Atividade();
 		No no = new No(acao);
 		inserir(no);
 	}

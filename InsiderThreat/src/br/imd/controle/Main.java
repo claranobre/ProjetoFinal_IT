@@ -1,5 +1,4 @@
 package br.imd.controle;
-import br.imd.controle.RespostaLog;
 
 /**
  * Método principal sem interface gráfica
@@ -18,5 +17,6 @@ public class Main extends LeituraLog{
 		leituraArquivoDevice(csvDevice);
 		leituraArquivoHTTP(csvHTTP);
 		buscaUsuario("CVW0133");
+		
 	}
 }

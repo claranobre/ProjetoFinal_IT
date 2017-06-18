@@ -7,20 +7,14 @@ package br.imd.controle;
  *
  */
 
-public class Atividades{
+public abstract class Atividade{
 
-	private String connect = "Connect";
-	private String logon = "Logon";
-	private String access;
 	private String id;
 	private int day, month, year;
 	private int hour, minute, second;
 	
 	private String dayInfo;
 	private String pc;
-	private boolean usedLogon = false;
-	private boolean usedConnect = false;
-	private boolean usedHttp = false;
 
 	/**
 	 * Método setDate
@@ -75,74 +69,6 @@ public class Atividades{
 	public int getYear() {
 		return year;
 	}
-
-	/**
-	 * Método setDevice para verificar se a atividade do usuário é "connect" ou "disconnect"
-	 * @param activity
-	 * @return void
-	 */
-
-	public void setDevice(String activity){
-		usedConnect = true;
-		if(activity.equals(connect)){
-			this.connect = "Connect";
-		}else{
-			this.connect = "Disconnect";
-		}
-	}
-
-	/**
-	 * Método getDevice
-	 * @return connect
-	 */
-
-	public String getDevice(){
-		return connect;
-	}
-
-	/**
-	 * Método setLogon para verificar se a atividade de login é "logon" ou "logoff"
-	 * @param activity
-	 */
-
-	public void setLogon(String activity){
-		usedLogon = true;
-		if(activity.equals(logon)){
-			this.logon = "Logon";
-		}else{
-			this.logon = "Logoff";
-		}
-	}
-
-	/**
-	 * Método getLogon
-	 * @return logon
-	 */
-
-	public String getLogon(){
-		return logon;
-	}
-
-	/**
-	 * Método setHttp
-	 * @param site
-	 * @return void
-	 */
-
-	public void setHttp(String site){
-		usedHttp = true;
-		this.access = site;
-	}
-
-	/**
-	 * Método getHttp
-	 * @return access
-	 */
-
-	public String getHttp(){
-		return access;
-	}
-
 	/**
 	 * Método setPc
 	 * @param pc
@@ -172,26 +98,5 @@ public class Atividades{
 	 */
 	public String getId(){
 		return id;
-	}
-	/**
-	 * Método isUsedLogon
-	 * @return usedLogon
-	 */
-	public boolean isUsedLogon() {
-		return usedLogon;
-	}
-	/**
-	 * Método isUsedConnect()
-	 * @return usedConnect
-	 */
-	public boolean isUsedConnect() {
-		return usedConnect;
-	}
-	/**
-	 * Método isUsedHttp
-	 * @return usedHttp
-	 */
-	public boolean isUsedHttp() {
-		return usedHttp;
 	}
 }

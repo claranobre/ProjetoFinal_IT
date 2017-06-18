@@ -2,9 +2,9 @@ package br.imd.controle;
 
 public class No {
 	
-	private Atividades acao;
+	private Atividade acao;
 
-    public No(Atividades acao) {
+    public No(Atividade acao) {
         this.acao = acao;
     }
 

@@ -55,11 +55,6 @@ public class RespostaLog extends Usuario{
 			for(int i = 0; i < users.size(); i++){
 				if(user.equals(users.get(i).getUser_ID())){
 					users.get(i).newActivityLogon(id, pc, logon[ACTIVITY_LOGON], month, day, year, hora, minuto, segundo);
-					if(logon[ACTIVITY_LOGON].equals("Logon")){
-						users.get(i).contadorLogon(month, day);
-					}else{
-						users.get(i).contadorLogoff(month, day);
-					}
 				}
 			}
 		}
@@ -188,7 +183,8 @@ public class RespostaLog extends Usuario{
 				//System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
 				//users.get(i).imprimirAtividades();
 				//users.get(i).diaCorrente(01,04);
-				users.get(i).imprimirAtividades();
+//				users.get(i).imprimirCalendario();
+				users.get(i).imprimirDia(2010,01,13);
 			}
 		}
 	}
