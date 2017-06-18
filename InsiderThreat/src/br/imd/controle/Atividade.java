@@ -99,4 +99,11 @@ public abstract class Atividade{
 	public String getId(){
 		return id;
 	}
+	
+	public boolean isFromDate(int year, int month, int day){
+		if(this.year == year && this.month == month && this.day == day){
+			return true;
+		}
+		return false;
+	}
 }

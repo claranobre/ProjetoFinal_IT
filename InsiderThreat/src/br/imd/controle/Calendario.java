@@ -29,5 +29,14 @@ public class Calendario {
 		}
 		return "";
 	}
+	
+	public int getYearCounter(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounter(month, day);
+			}
+		}
+		return -1;
+	}
 
 }

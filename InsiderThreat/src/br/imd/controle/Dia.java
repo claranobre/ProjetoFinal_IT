@@ -1,11 +1,11 @@
 package br.imd.controle;
 
 public class Dia {
-	private int contadorLogon =  0;
-	private int contadorLogoff = 0;
-	private int contadorConnect = 0;
-	private int contadorDisconnect = 0;
-	private int contadorHttp = 0;
+	private int counterLogon =  0;
+	private int counterLogoff = 0;
+	private int counterConnect = 0;
+	private int counterDisconnect = 0;
+	private int counterHttp = 0;
 	private int dia;
 	
 	public Dia(int dia){
@@ -21,23 +21,23 @@ public class Dia {
 	}
 
 	private void incrementLogon(){
-		this.contadorLogon++;
+		this.counterLogon++;
 	}
 	
 	private void incrementLogoff(){
-		this.contadorLogoff++;
+		this.counterLogoff++;
 	}
 	
 	private void incrementConnect(){
-		this.contadorConnect++;
+		this.counterConnect++;
 	}
 	
 	private void incrementDisconnect(){
-		this.contadorDisconnect++;
+		this.counterDisconnect++;
 	}
 	
 	private void incrementHttps(){
-		this.contadorHttp++;
+		this.counterHttp++;
 	}
 	
 	public void increment(Atividade a){
@@ -64,7 +64,12 @@ public class Dia {
 		}
 	}
 	
+	public int getCounterActivity(){
+		int a = this.counterConnect + this.counterDisconnect + this.counterHttp + this.counterLogoff + this.counterLogon; 
+		return a;
+	}
+	
 	public String getValores(){
-		return "{connect: "+ this.contadorConnect + " disconnect: " + this.contadorDisconnect + " Logon: " + this.contadorLogon +" Logoff: " + contadorLogoff +" Https: " + contadorHttp +"}";
+		return "{connect: "+ this.counterConnect + " disconnect: " + this.counterDisconnect + " Logon: " + this.counterLogon +" Logoff: " + counterLogoff +" Https: " + counterHttp +"}";
 	}
 }

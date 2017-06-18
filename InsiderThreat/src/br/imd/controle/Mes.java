@@ -38,4 +38,14 @@ public class Mes {
 		}
 		return "";
 	}
+	
+	public int getDayCounter(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+//				System.out.println(dias.get(i).getValores());
+				return dias.get(i).getCounterActivity();
+			}
+		}
+		return -1;
+	}
 }

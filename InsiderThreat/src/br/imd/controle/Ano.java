@@ -38,4 +38,13 @@ public class Ano {
 		}
 		return "";
 	}
+	
+	public int getMonthCounter(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounter(day);
+			}
+		}
+		return -1;
+	}
 }

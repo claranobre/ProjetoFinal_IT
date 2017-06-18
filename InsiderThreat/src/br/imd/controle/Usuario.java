@@ -14,34 +14,6 @@ public class Usuario{
 	private String email;
 	private String role;
 	private Calendario calendar;
-	private ArrayList<Atividade> atividade = new ArrayList<Atividade>();
-	
-	private int contadorLogon =  0;
-	private int contadorLogoff = 0;
-	private int contadorConnect = 0;
-	private int contadorDisconnect = 0;
-	private int contadorHttp = 0;
-	/**
-	 * Matriz bidimensional para armazenar os valores de meses e dias analisados
-	 */
-	//private int contadorAtividades[][] = new int[12][31];
-	/**
-	 * Matriz bidimensional para armazenar a quantidade de connect e disconnect do device do usuário
-	 */ 
-	private int contadorAtividadesConnect[][] = new int [12][31];
-	private int contadorAtividadesDisconnect[][] = new int [12][31];
-	/**
-	 * Matriz bidimensional para armazenar a quantidade de logons e logoffs do usuário
-	 */
-	private static int contadorAtividadesLogon[][] = new int [12][31];
-	private static int contadorAtividadesLogoff[][] = new int [12][31];
-	/**
-	 * Matriz bidimensional para armazenar a quantidade de sites acessados pelo usuário
-	 */
-	private int contadorAtividadesHttp[][] = new int[12][31];
-	/**
-	 * ArrayList de Atividades para poder gerenciar o que cada usuário executou
-	 */
 	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 
 	public Usuario(){
@@ -161,7 +133,7 @@ public class Usuario{
 		device.setId(id);
 		device.setPc(pc);
 		device.setDate(month, day, year, hour, minute, second);
-		atividade.add(device);
+		atividades.add(device);
 		calendar.newActivity(device);
 	}
 	/**
@@ -175,7 +147,7 @@ public class Usuario{
 		logons.setId(id);
 		logons.setPc(pc);
 		logons.setDate(month, day, year, hour, minute, second);
-		atividade.add(logons);
+		atividades.add(logons);
 		calendar.newActivity(logons);
 	}
 	/**
@@ -189,28 +161,45 @@ public class Usuario{
 		http.setId(id);
 		http.setPc(pc);
 		http.setDate(month, day, year, hour, minute, second);
-		atividade.add(http);
+		atividades.add(http);
 		calendar.newActivity(http);
 	}
 	/**
 	 * Método imprimirAtividades imprime as atividades executadas pelo usuário buscado
 	 * @return void
 	 */
+	public int getContadorDia(int year, int month, int day){
+		return calendar.getYearCounter(year, month, day);
+	}
+	
+	public void imprimirAtividade(Atividade a){
+		if(a instanceof Device){
+			Device d = (Device) a;
+			System.out.println(d.getType());
+			
+		}
+		else if(a instanceof Https){
+			Https h = (Https) a;
+			System.out.println(h.getUrl());
+			
+		}
+		else if(a instanceof Login){
+			Login l = (Login) a;
+			System.out.println(l.getType());
+		}
+	}
+	
 	public void imprimirAtividades(){
-		for (int i = 0; i < atividade.size(); i++){
-			if(atividade.get(i) instanceof Device){
-				Device d = (Device) atividade.get(i);
-				System.out.println(d.getType());
-				
-			}
-			else if(atividade.get(i) instanceof Https){
-				Https h = (Https) atividade.get(i);
-				System.out.println(h.getUrl());
-				
-			}
-			else if(atividade.get(i) instanceof Login){
-				Login l = (Login) atividade.get(i);
-				System.out.println(l.getType());
+		for (int i = 0; i < atividades.size(); i++){
+			imprimirAtividade(atividades.get(i));
+		}
+	}
+	
+	public void imprimirAtividadesDia(int ano, int mes, int dia){
+		for(int i = 0; i < atividades.size(); i++){
+			Atividade a = atividades.get(i);
+			if(a.isFromDate(ano, mes, dia)){
+				imprimirAtividade(a);
 			}
 		}
 	}

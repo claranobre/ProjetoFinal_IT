@@ -3,7 +3,10 @@ package br.imd.controle;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.math.*;
+
 /**
  * 
  * @author Ana Clara e Felipe Gilberto
@@ -180,12 +183,63 @@ public class RespostaLog extends Usuario{
 	public static void buscaUsuario(String user){
 		for(int i = 0; i < users.size(); i++){
 			if(users.get(i).getUser_ID().equals(user)){
-				//System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
-				//users.get(i).imprimirAtividades();
-				//users.get(i).diaCorrente(01,04);
-//				users.get(i).imprimirCalendario();
-				users.get(i).imprimirDia(2010,01,13);
+				System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
 			}
 		}
+	}
+	
+	public static ArrayList<Usuario> usuariosSuspeitos(int year, int month, int day){
+		ArrayList<Usuario> suspeitos = new ArrayList<Usuario>();
+		double media_acessos = calculateMedia(year, month, day);
+		ArrayList<Usuario> usuarios_com_acesso = usuariosComAcesso(year, month, day);
+		double desvio_padrao = desvioPadraoDia(usuarios_com_acesso, media_acessos, year, month, day);
+		
+		for(int i = 0; i < usuarios_com_acesso.size(); i++){
+			double desvio_usuario = 0;
+			double acesso_usuario = (double) usuarios_com_acesso.get(i).getContadorDia(year, month, day);
+			double variancia = acesso_usuario - media_acessos;
+			desvio_usuario = Math.sqrt(Math.pow(variancia, 2));
+			
+			if(desvio_usuario > desvio_padrao){
+				suspeitos.add(usuarios_com_acesso.get(i));
+			}
+		}
+		return suspeitos;
+	}
+	
+	private static ArrayList<Usuario> usuariosComAcesso(int year, int month, int day){
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		
+		for (int i = 0; i < users.size(); i++) {
+			if(users.get(i).getContadorDia(year, month, day) > 0){
+				usuarios.add(users.get(i));
+			}
+		}
+		return usuarios;
+	}
+	
+	private static double calculateMedia(int year, int month, int day){
+		int totalActivities = 0;
+		int usuariosOn = 0;
+		for (int i = 0; i < users.size(); i++) {
+			if(users.get(i).getContadorDia(year, month, day) > 0){
+				totalActivities += users.get(i).getContadorDia(year, month, day);
+				usuariosOn++;
+			}
+		}
+		
+		double media = totalActivities/(double) usuariosOn;
+		return media;
+	}
+	
+	private static double desvioPadraoDia (ArrayList<Usuario> usuarios, double media_acesso, int year, int month, int day){
+		double dp = 0;
+		for(int i = 0; i < usuarios.size(); i++){
+			double acesso_usuario = (double) usuarios.get(i).getContadorDia(year, month, day);
+			double variancia = acesso_usuario - media_acesso;
+			dp += Math.pow(variancia, 2);
+		}
+		dp /= usuarios.size();
+		return Math.sqrt(dp);
 	}
 }
