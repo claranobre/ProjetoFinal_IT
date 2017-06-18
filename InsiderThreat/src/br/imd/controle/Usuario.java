@@ -13,8 +13,39 @@ public class Usuario{
 	private String domain;
 	private String email;
 	private String role;
+<<<<<<< HEAD
 	private Calendario calendar;
 	private ArrayList<Atividade> atividade = new ArrayList<Atividade>();
+=======
+	
+	private int contadorLogon =  0;
+	private int contadorLogoff = 0;
+	private int contadorConnect = 0;
+	private int contadorDisconnect = 0;
+	private int contadorHttp = 0;
+	/**
+	 * Matriz bidimensional para armazenar os valores de meses e dias analisados
+	 */
+	//private int contadorAtividades[][] = new int[12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de connect e disconnect do device do usuário
+	 */ 
+	private int contadorAtividadesConnect[][] = new int [12][31];
+	private int contadorAtividadesDisconnect[][] = new int [12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de logons e logoffs do usuário
+	 */
+	private static int contadorAtividadesLogon[][] = new int [12][31];
+	private static int contadorAtividadesLogoff[][] = new int [12][31];
+	/**
+	 * Matriz bidimensional para armazenar a quantidade de sites acessados pelo usuário
+	 */
+	private int contadorAtividadesHttp[][] = new int[12][31];
+	/**
+	 * ArrayList de Atividades para poder gerenciar o que cada usuário executou
+	 */
+	private ArrayList<Atividades> atividades = new ArrayList<Atividades>();
+>>>>>>> 3474fe3336c2eaf78e28c275af5fcd68a607ae0b
 
 	public Usuario(){
 		calendar = new Calendario();
