@@ -25,7 +25,7 @@ public class Usuario{
 	//private int contadorAtividades[][] = new int[12][31];
 	/**
 	 * Matriz bidimensional para armazenar a quantidade de connect e disconnect do device do usuário
-	 */
+	 */ 
 	private int contadorAtividadesConnect[][] = new int [12][31];
 	private int contadorAtividadesDisconnect[][] = new int [12][31];
 	/**
