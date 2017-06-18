@@ -1,9 +1,6 @@
 package br.imd.controle;
-<<<<<<< HEAD
-=======
+
 import br.imd.controle.RespostaLog;
-import br.imd.visao.CapturaEventoBotao;
->>>>>>> 3474fe3336c2eaf78e28c275af5fcd68a607ae0b
 
 /**
  * Método principal sem interface gráfica
@@ -22,10 +19,5 @@ public class Main extends LeituraLog{
 		leituraArquivoDevice(csvDevice);
 		leituraArquivoHTTP(csvHTTP);
 		buscaUsuario("CVW0133");
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> 3474fe3336c2eaf78e28c275af5fcd68a607ae0b
 	}
 }

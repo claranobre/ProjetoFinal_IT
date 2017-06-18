@@ -13,10 +13,8 @@ public class Usuario{
 	private String domain;
 	private String email;
 	private String role;
-<<<<<<< HEAD
 	private Calendario calendar;
 	private ArrayList<Atividade> atividade = new ArrayList<Atividade>();
-=======
 	
 	private int contadorLogon =  0;
 	private int contadorLogoff = 0;
@@ -44,8 +42,7 @@ public class Usuario{
 	/**
 	 * ArrayList de Atividades para poder gerenciar o que cada usuário executou
 	 */
-	private ArrayList<Atividades> atividades = new ArrayList<Atividades>();
->>>>>>> 3474fe3336c2eaf78e28c275af5fcd68a607ae0b
+	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 
 	public Usuario(){
 		calendar = new Calendario();
