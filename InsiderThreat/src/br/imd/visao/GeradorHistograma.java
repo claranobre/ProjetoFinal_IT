@@ -9,6 +9,8 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
 
+import br.imd.controle.Calendario;
+
 /**
  * 
  * @author Ana Clara e Felipe Gilberto
@@ -17,14 +19,23 @@ import org.jfree.ui.RefineryUtilities;
  */
 
 public class GeradorHistograma extends ApplicationFrame{
-
-	public GeradorHistograma( String applicationTitle , String chartTitle ) {
+/**
+ * Método Construtor
+ * @param applicationTitle
+ * @param chartTitle
+ * @param contadorLogon
+ * @param contadorLogoff
+ * @param contadorConnect
+ * @param contadorDisconnect
+ * @param contadorHttp
+ */
+	public GeradorHistograma( String applicationTitle , String chartTitle, int contadorLogon, int contadorLogoff, int contadorConnect, int contadorDisconnect, int contadorHttp ) {
 		super( applicationTitle );        
 		JFreeChart barChart = ChartFactory.createBarChart(
 				chartTitle,           
 				"Atividades",            
 				"Frequencia",            
-				createDataset(),          
+				createDataset(contadorLogon, contadorLogoff, contadorConnect, contadorDisconnect, contadorHttp),          
 				PlotOrientation.VERTICAL,           
 				true, true, false);
 
@@ -32,37 +43,35 @@ public class GeradorHistograma extends ApplicationFrame{
 		chartPanel.setPreferredSize(new java.awt.Dimension( 560 , 367 ) );        
 		setContentPane( chartPanel ); 
 	}
-
-	private CategoryDataset createDataset( ) {
+/**
+ * Método createDataset do tipo CategoryDataset
+ * @param contadorLogon
+ * @param contadorLogoff
+ * @param contadorConnect
+ * @param contadorDisconnect
+ * @param contadorHttp
+ * @return dataset
+ */
+	public static CategoryDataset createDataset(int contadorLogon, int contadorLogoff, int contadorConnect, int contadorDisconnect, int contadorHttp) {
+		
 		final String logon_user = "Logon";        
 		final String device = "Device";        
-		final String acesso = "Sites";        
+		final String acesso = "Sites";   
+		final String http = "Acessados";
 		final String logon = "Logon";        
 		final String logoff = "Logoff";        
 		final String connect = "Connect";        
 		final String disconnect = "Disconnect";        
-		final DefaultCategoryDataset dataset = 
-				new DefaultCategoryDataset();  
-
-		dataset.addValue( 1.0 , logon_user , logon );                
-		dataset.addValue( 5.0 , logon_user , logoff );          
+		final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+		
+		dataset.addValue(contadorLogon, logon_user , logon );                
+		dataset.addValue(contadorLogoff, logon_user , logoff );          
        
-		dataset.addValue( 6.0 , device , connect );       
-		dataset.addValue( 4.0 , device , disconnect );
+		dataset.addValue(contadorConnect, device , connect );       
+		dataset.addValue(contadorDisconnect, device , disconnect );
 
-		/*dataset.addValue( 4.0 , acesso , logon );        
-		dataset.addValue( 2.0 , acesso , connect );        
-		dataset.addValue( 3.0 , acesso , logoff );        
-		dataset.addValue( 6.0 , acesso , disconnect );*/     
+		dataset.addValue(contadorHttp, http, acesso);
 
 		return dataset; 
-	}
-
-	public static void main(String[ ] args) {
-		GeradorHistograma chart = new GeradorHistograma("Histograma", 
-				"Atividades do Usuario");
-		chart.pack();        
-		RefineryUtilities.centerFrameOnScreen(chart);        
-		chart.setVisible(true); 
 	}
 }

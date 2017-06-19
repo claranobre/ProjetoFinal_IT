@@ -59,4 +59,79 @@ public class Calendario {
 		}
 		return -1;
 	}
+	/**
+	 * Método getYearCounterConnect
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return anos.get(i).getMonthCounterConnect(month, day) ou -1
+	 */
+	public int getYearCounterConnect(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounterConnect(month, day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getYearCounterDisconnect
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return anos.get(i).getMonthCounterDisconnect(month, day) ou -1
+	 */
+	public int getYearCounterDisconnect(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounterDisconnect(month, day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getYearCounterLogon
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return anos.get(i).getMonthCounterLogon(month, day)
+	 */
+	public int getYearCounterLogon(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounterLogon(month, day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getYearCounterLogoff
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return anos.get(i).getMonthCounterLogoff(month, day) ou -1
+	 */
+	public int getYearCounterLogoff(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounterLogoff(month, day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getYearCounterHttp
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return anos.get(i).getMonthCounterHttp(month, day) ou -1
+	 */
+	public int getYearCounterHttp(int year, int month, int day){
+		for(int i = 0; i < anos.size(); i++){
+			if(anos.get(i).getAno() == year){
+				return anos.get(i).getMonthCounterHttp(month, day);
+			}
+		}
+		return -1;
+	}
 }

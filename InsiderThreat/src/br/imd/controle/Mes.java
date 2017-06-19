@@ -67,8 +67,72 @@ public class Mes {
 	public int getDayCounter(int day){
 		for (int i = 0; i < dias.size(); i++) {
 			if(dias.get(i).getDia() == day){
-//				System.out.println(dias.get(i).getValores());
 				return dias.get(i).getCounterActivity();
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getDayCounterConnect
+	 * @param day
+	 * @return dias.get(i).getCounterActivityConnect() ou -1
+	 */
+	public int getDayCounterConnect(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+				return dias.get(i).getCounterActivityConnect();
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getDayCounterDisconnect
+	 * @param day
+	 * @return dias.get(i).getCounterActivityDisconnect() ou -1
+	 */
+	public int getDayCounterDisconnect(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+				return dias.get(i).getCounterActivityDisconnect();
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getDayCounterLogon
+	 * @param day
+	 * @return dias.get(i).getCounterActivityLogon() ou -1
+	 */
+	public int getDayCounterLogon(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+				return dias.get(i).getCounterActivityLogon();
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getDayCounterLogoff
+	 * @param day
+	 * @return dias.get(i).getCounterActivityLogoff() ou -1
+	 */
+	public int getDayCounterLogoff(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+				return dias.get(i).getCounterActivityLogoff();
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getDayCounterHttp
+	 * @param day
+	 * @return dias.get(i).getCounterActivityHttp() ou -1
+	 */
+	public int getDayCounterHttp(int day){
+		for (int i = 0; i < dias.size(); i++) {
+			if(dias.get(i).getDia() == day){
+				return dias.get(i).getCounterActivityHttp();
 			}
 		}
 		return -1;

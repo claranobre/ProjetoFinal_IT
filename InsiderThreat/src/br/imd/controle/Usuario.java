@@ -1,6 +1,10 @@
 package br.imd.controle;
 
 import java.util.ArrayList;
+
+import org.jfree.ui.RefineryUtilities;
+
+import br.imd.visao.GeradorHistograma;
 /**
  * 
  * @author Ana Clara e Felipe Gilberto
@@ -14,6 +18,7 @@ public class Usuario{
 	private String email;
 	private String role;
 	private Calendario calendar;
+	private GeradorHistograma histograma;
 	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 
 	/**
@@ -22,23 +27,21 @@ public class Usuario{
 	public Usuario(){
 		calendar = new Calendario();
 	}
+
 	/**
-	 * Método diaCorrente
+	 * Método histogramaImpresso
+	 * @param year
 	 * @param month
 	 * @param day
 	 */
-	public void diaCorrente(int month, int day){
+	public void histogramaImpresso(int year, int month, int day){
+		GeradorHistograma chart = new GeradorHistograma("Histograma", 
+				"Atividades do Usuario", calendar.getYearCounterLogon(year, month, day),calendar.getYearCounterLogoff(year, month, day), calendar.getYearCounterConnect(year, month, day), calendar.getYearCounterDisconnect(year, month, day), calendar.getYearCounterHttp(year, month, day));
+		chart.pack();        
+		RefineryUtilities.centerFrameOnScreen(chart);        
+		chart.setVisible(true);
 	}
-	/**
-	 * Método para armazenar as atividades anteriores do usuário
-	 * @return void
-	 */
-	public void anteriores(){}
-	/**
-	 * Método para armazenar as atividades suspeitas e o usuário que a executou
-	 * @return void
-	 */
-	public void suspeitas(){}
+	
 	/**
 	 * Método SetUsuario para armazenar os dados de cada usuário
 	 * @param name

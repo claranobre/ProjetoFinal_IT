@@ -1,0 +1,767 @@
+Nome: Aaron C Donovan UserID: ACD0647 Email: Aaron.C.Donovan@dtaa.com Role: Senior MangerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://youtube.com"
+"http://google.com"
+
+Nome: Abbot R Cherry UserID: ARC0677 Email: Abbot.R.Cherry@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://ticketmaster.com"
+"http://safe-unit.direction.net"
+"http://google.com"
+
+Nome: Abra B Logan UserID: ABL0836 Email: Abra.B.Logan@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 5}Logon
+"http://facebook.com"
+"http://cars.com"
+"http://equal.com"
+"http://youtube.com"
+"http://facebook.com"
+
+Nome: Addison A Kirk UserID: AAK0924 Email: Addison.A.Kirk@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://woot.com"
+"http://zillow.com"
+
+Nome: Adele Q Griffith UserID: AQG0678 Email: Adele.Q.Griffith@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Adena A Richards UserID: AAR0508 Email: Adena.A.Richards@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://facebook.com"
+"http://google.com"
+
+Nome: Adria T Jacobs UserID: ATJ0284 Email: Adria.T.Jacobs@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Ahmed R Koch UserID: ARK0026 Email: Ahmed.R.Koch@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Aidan G Wallace UserID: AGW0182 Email: Aidan.G.Wallace@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://ebay.com"
+
+Nome: Aiko F Newton UserID: AFN0918 Email: Aiko.F.Newton@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Aimee Z Christian UserID: AZC0030 Email: Aimee.Z.Christian@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Akeem R Beach UserID: ARB0050 Email: Akeem.R.Beach@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://google.com"
+
+Nome: Alana J Curry UserID: AJC0266 Email: Alana.J.Curry@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://wordpress.com"
+
+Nome: Albert K Pruitt UserID: AKP0173 Email: Albert.K.Pruitt@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://youtube.com"
+"http://google.com"
+"http://youtube.com"
+
+Nome: Alexander F Rodgers UserID: AFR0646 Email: Alexander.F.Rodgers@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://bing.com"
+
+Nome: Alfonso M Atkinson UserID: AMA0191 Email: Alfonso.M.Atkinson@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 4}Logon
+Connect
+Disconnect
+"http://google.com"
+"http://google.com"
+"http://google.com"
+"http://google.com"
+
+Nome: Ali K Short UserID: AKS0283 Email: Ali.K.Short@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 4}Logon
+"http://youtube.com"
+"http://youtube.com"
+"http://walkacross.collar.org"
+"http://cbssports.com"
+
+Nome: Alika F Oneil UserID: AFO0022 Email: Alika.F.Oneil@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://badornament.garden.com"
+"http://ups.com"
+
+Nome: Allegra M Merrill UserID: AMM0661 Email: Allegra.M.Merrill@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://pleasure.org"
+
+Nome: Alma E Greene UserID: AEG0905 Email: Alma.E.Greene@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://craigslist.org"
+"http://wine.control.org"
+"http://craigslist.org"
+
+Nome: Alma F Harvey UserID: AFH0331 Email: Alma.F.Harvey@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://wikipedia.org"
+"http://wikipedia.org"
+"http://youtube.com"
+
+Nome: Alvin N Cruz UserID: ANC0012 Email: Alvin.N.Cruz@dtaa.com Role: ForemanAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://google.com"
+"http://google.com"
+"http://google.com"
+
+Nome: Amena L Navarro UserID: ALN0201 Email: Amena.L.Navarro@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://yahoo.com"
+"http://mountain.destruction.org"
+
+Nome: Anjolie M Anthony UserID: AMA0606 Email: Anjolie.M.Anthony@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://cnet.com"
+"http://facebook.com"
+
+Nome: Arden J Burris UserID: AJB0016 Email: Arden.J.Burris@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+Connect
+"http://linkedin.com"
+"http://linkedin.com"
+
+Nome: Armand N Walton UserID: ANW0351 Email: Armand.N.Walton@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://google.com"
+
+Nome: Arsenio B Baldwin UserID: ABB0272 Email: Arsenio.B.Baldwin@dtaa.com Role: Loading DockAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 2}Logon
+Connect
+Disconnect
+"http://facebook.com"
+"http://google.com"
+
+Nome: Arsenio C Hoover UserID: ACH0803 Email: Arsenio.C.Hoover@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Ashton S Stein UserID: ASS0824 Email: Ashton.S.Stein@dtaa.com Role: Senior MangerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://aol.com"
+"http://huffingtonpost.com"
+
+Nome: August A Cotton UserID: AAC0344 Email: August.A.Cotton@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://boy.net"
+"http://facebook.com"
+"http://youtube.com"
+
+Nome: August L Lancaster UserID: ALL0155 Email: August.L.Lancaster@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://netflix.com"
+"http://google.com"
+"http://pull-thick.com"
+
+Nome: Aurelia I Burns UserID: AIB0797 Email: Aurelia.I.Burns@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+Connect
+"http://yahoo.com"
+"http://yahoo.com"
+
+Nome: Aurora J Avila UserID: AJA0220 Email: Aurora.J.Avila@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://comcast.com"
+
+Nome: Aurora R Savage UserID: ARS0993 Email: Aurora.R.Savage@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 3 Logoff: 2 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+
+Nome: Avram B Sullivan UserID: ABS0726 Email: Avram.B.Sullivan@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://google.com"
+"http://facebook.com"
+"http://facebook.com"
+
+Nome: Avye H Sellers UserID: AHS0926 Email: Avye.H.Sellers@dtaa.com Role: VPAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://yahoo.com"
+"http://constantcontact.com"
+"http://yahoo.com"
+
+Nome: Baxter N Nieves UserID: BNN0072 Email: Baxter.N.Nieves@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://youtube.com"
+"http://cbssports.com"
+"http://warriorforum.com"
+
+Nome: Benjamin H Howe UserID: BHH0460 Email: Benjamin.H.Howe@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://bing.com"
+"http://facebook.com"
+
+Nome: Benjamin J Caldwell UserID: BJC0569 Email: Benjamin.J.Caldwell@dtaa.com Role: Loading DockAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Beverly A May UserID: BAM0466 Email: Beverly.A.May@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://google.com"
+"http://google.com"
+"http://google.com"
+
+Nome: Bevis M Le UserID: BML0618 Email: Bevis.M.Le@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://go.com"
+"http://optmd.com"
+"http://go.com"
+
+Nome: Blaze A Faulkner UserID: BAF0379 Email: Blaze.A.Faulkner@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Boris C Henry UserID: BCH0912 Email: Boris.C.Henry@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://wikipedia.org"
+
+Nome: Boris C Spence UserID: BCS0374 Email: Boris.C.Spence@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 0 Logoff: 0 Https: 3}"http://google.com"
+"http://nypost.com"
+"http://google.com"
+
+Nome: Bradley G Frost UserID: BGF0236 Email: Bradley.G.Frost@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Brennan D Ingram UserID: BDI0634 Email: Brennan.D.Ingram@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://google.com"
+
+Nome: Brianna M Marshall UserID: BMM0247 Email: Brianna.M.Marshall@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://bing.com"
+"http://zazzle.com"
+
+Nome: Britanni G Vargas UserID: BGV0046 Email: Britanni.G.Vargas@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 3}Logon
+"http://yahoo.com"
+"http://ebay.com"
+"http://pin-first.com"
+
+Nome: Brock C Barber UserID: BCB0013 Email: Brock.C.Barber@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://google.com"
+
+Nome: Brock J Morrison UserID: BJM0992 Email: Brock.J.Morrison@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 3 Logoff: 2 Https: 1}Logon
+Logoff
+Logon
+Logoff
+Logon
+"http://blogspot.com"
+
+Nome: Brynne N William UserID: BNW0850 Email: Brynne.N.William@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://facebook.com"
+
+Nome: Cara C Goodman UserID: CCG0876 Email: Cara.C.Goodman@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Carlos O Shannon UserID: COS0121 Email: Carlos.O.Shannon@dtaa.com Role: Project ManagerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Castor L Nelson UserID: CLN0999 Email: Castor.L.Nelson@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 5 Logoff: 3 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+Logoff
+Logon
+Logon
+
+Nome: Cedric R Carson UserID: CRC0996 Email: Cedric.R.Carson@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 4 Logoff: 3 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+Logoff
+Logon
+
+Nome: Chadwick P Perry UserID: CPP0761 Email: Chadwick.P.Perry@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Chantale V Williams UserID: CVW0133 Email: Chantale.V.Williams@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Chiquita A Conway UserID: CAC0854 Email: Chiquita.A.Conway@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Christen H Atkins UserID: CHA0174 Email: Christen.H.Atkins@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Clinton S Cash UserID: CSC0297 Email: Clinton.S.Cash@dtaa.com Role: Senior MangerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Colt L Ballard UserID: CLB0995 Email: Colt.L.Ballard@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 7 Logoff: 6 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+Logoff
+Logon
+Logon
+Logoff
+Logon
+Logoff
+Logon
+Logoff
+
+Nome: Courtney A Wright UserID: CAW0976 Email: Courtney.A.Wright@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Cyrus A Holmes UserID: CAH0610 Email: Cyrus.A.Holmes@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://google.com"
+"http://cbssports.com"
+
+Nome: Demetria A Raymond UserID: DAR0341 Email: Demetria.A.Raymond@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://facebook.com"
+"http://yahoo.com"
+
+Nome: Dillon S Medina UserID: DSM0990 Email: Dillon.S.Medina@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 3 Logoff: 2 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+
+Nome: Dorothy A Vasquez UserID: DAV0579 Email: Dorothy.A.Vasquez@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Echo S Battle UserID: ESB0080 Email: Echo.S.Battle@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Eden M Zimmerman UserID: EMZ0196 Email: Eden.M.Zimmerman@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Eleanor L Alvarez UserID: ELA0741 Email: Eleanor.L.Alvarez@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Emi K Bentley UserID: EKB0587 Email: Emi.K.Bentley@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://comedycentral.com"
+"http://google.com"
+
+Nome: Emmanuel D Harper UserID: EDH0146 Email: Emmanuel.D.Harper@dtaa.com Role: Loading DockAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Graham R Salas UserID: GRS0372 Email: Graham.R.Salas@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Graiden N Hogan UserID: GNH0394 Email: Graiden.N.Hogan@dtaa.com Role: JanitorAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Hanae D Rivas UserID: HDR0261 Email: Hanae.D.Rivas@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://makepoor.com"
+
+Nome: Harriet N Farmer UserID: HNF0812 Email: Harriet.N.Farmer@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Hayes B Little UserID: HBL0517 Email: Hayes.B.Little@dtaa.com Role: DirectorAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 2 Logoff: 0 Https: 0}Logon
+Logon
+Connect
+Disconnect
+
+Nome: Hayley C Gilmore UserID: HCG0731 Email: Hayley.C.Gilmore@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Heather I Bean UserID: HIB0604 Email: Heather.I.Bean@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Hedy S Dodson UserID: HSD0519 Email: Hedy.S.Dodson@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Hillary S Rocha UserID: HSR0472 Email: Hillary.S.Rocha@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Isaiah R Chen UserID: IRC0991 Email: Isaiah.R.Chen@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 2 Logoff: 1 Https: 0}Logon
+Logoff
+Logon
+Connect
+Disconnect
+
+Nome: Ivan K Hatfield UserID: IKH0904 Email: Ivan.K.Hatfield@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Jane C Stark UserID: JCS0873 Email: Jane.C.Stark@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Jeremy J Ramos UserID: JJR0278 Email: Jeremy.J.Ramos@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Jermaine C Conrad UserID: JCC0998 Email: Jermaine.C.Conrad@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 4 Logoff: 2 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+Logon
+
+Nome: Joan L Mccarty UserID: JLM0053 Email: Joan.L.Mccarty@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Jordan Z Oconnor UserID: JZO0727 Email: Jordan.Z.Oconnor@dtaa.com Role: JanitorAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Josephine S Brewer UserID: JSB0493 Email: Josephine.S.Brewer@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Julie M Santana UserID: JMS0793 Email: Julie.M.Santana@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Justin N French UserID: JNF0543 Email: Justin.N.French@dtaa.com Role: Loading DockAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Kathleen E Everett UserID: KEE0997 Email: Kathleen.E.Everett@dtaa.com Role: IT AdminAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 4 Logoff: 3 Https: 0}Logon
+Logoff
+Logon
+Logoff
+Logon
+Logoff
+Logon
+
+Nome: Kendall S Barton UserID: KSB0673 Email: Kendall.S.Barton@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Kenneth K Walls UserID: KKW0676 Email: Kenneth.K.Walls@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Lacey C Kelly UserID: LCK0666 Email: Lacey.C.Kelly@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Lane R Hood UserID: LRH0747 Email: Lane.R.Hood@dtaa.com Role: Project ManagerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Lucy B Bell UserID: LBB0095 Email: Lucy.B.Bell@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: MacKensie V Walker UserID: MVW0630 Email: MacKensie.V.Walker@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Maite M Fuentes UserID: MMF0289 Email: Maite.M.Fuentes@dtaa.com Role: Of CouncilAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Martha C Melendez UserID: MCM0346 Email: Martha.C.Melendez@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://earthlink.net"
+
+Nome: Mechelle I Koch UserID: MIK0034 Email: Mechelle.I.Koch@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Melinda M Houston UserID: MMH0612 Email: Melinda.M.Houston@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Melissa J Mcmillan UserID: MJM0469 Email: Melissa.J.Mcmillan@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Melissa X Meadows UserID: MXM0838 Email: Melissa.X.Meadows@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Mercedes A Gross UserID: MAG0290 Email: Mercedes.A.Gross@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Mona Q Lynch UserID: MQL0135 Email: Mona.Q.Lynch@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Noel J Moreno UserID: NJM0476 Email: Noel.J.Moreno@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 1 Logoff: 0 Https: 2}Logon
+"http://wikipedia.org"
+"http://shelf.org"
+
+Nome: Nola N Burton UserID: NNB0443 Email: Nola.N.Burton@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Ocean Y Rojas UserID: OYR0801 Email: Ocean.Y.Rojas@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 1}Logon
+Connect
+Disconnect
+"http://me.com"
+
+Nome: Omar D Weaver UserID: ODW0839 Email: Omar.D.Weaver@dtaa.com Role: Project ManagerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Owen J Hale UserID: OJH0425 Email: Owen.J.Hale@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 2 Logoff: 1 Https: 0}Logon
+Logon
+Logoff
+Connect
+Disconnect
+
+Nome: Pearl S Perry UserID: PSP0555 Email: Pearl.S.Perry@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Plato U Horn UserID: PUH0847 Email: Plato.U.Horn@dtaa.com Role: DirectorAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Prescott X Benton UserID: PXB0069 Email: Prescott.X.Benton@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Quinn K Robbins UserID: QKR0651 Email: Quinn.K.Robbins@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Raja E Sutton UserID: RES0962 Email: Raja.E.Sutton@dtaa.com Role: Senior MangerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Rhea Q Hammond UserID: RQH0770 Email: Rhea.Q.Hammond@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Ria X Ellison UserID: RXE0207 Email: Ria.X.Ellison@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Riley M Estrada UserID: RME0699 Email: Riley.M.Estrada@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Rose B Cantu UserID: RBC0879 Email: Rose.B.Cantu@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Rylee C Wagner UserID: RCW0436 Email: Rylee.C.Wagner@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Savannah C Wyatt UserID: SCW0707 Email: Savannah.C.Wyatt@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Shea A Hodge UserID: SAH0192 Email: Shea.A.Hodge@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Sophia H Riddle UserID: SHR0025 Email: Sophia.H.Riddle@dtaa.com Role: Of CouncilAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Stacy D Conrad UserID: SDC0032 Email: Stacy.D.Conrad@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Stephen B Hull UserID: SBH0674 Email: Stephen.B.Hull@dtaa.com Role: DirectorAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 2 Logoff: 1 Https: 0}Logon
+Logon
+Logoff
+
+Nome: Stephen L Copeland UserID: SLC0778 Email: Stephen.L.Copeland@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Susan P Kennedy UserID: SPK0818 Email: Susan.P.Kennedy@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Sybil O Mckee UserID: SOM0478 Email: Sybil.O.Mckee@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Sylvester J Holloway UserID: SJH0588 Email: Sylvester.J.Holloway@dtaa.com Role: ForemanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Teagan P Camacho UserID: TPC0102 Email: Teagan.P.Camacho@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 0 disconnect: 0 Logon: 2 Logoff: 1 Https: 0}Logon
+Logon
+Logoff
+
+Nome: Thomas L Bush UserID: TLB0017 Email: Thomas.L.Bush@dtaa.com Role: Administrative StaffAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Troy N Beard UserID: TNB0740 Email: Troy.N.Beard@dtaa.com Role: Project ManagerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Vanna F Pate UserID: VFP0669 Email: Vanna.F.Pate@dtaa.com Role: TradesmanAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Vaughan M Alford UserID: VMA0051 Email: Vaughan.M.Alford@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Wallace D Williamson UserID: WDW0485 Email: Wallace.D.Williamson@dtaa.com Role: Administrative AssistantAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Xander Q Winters UserID: XQW0354 Email: Xander.Q.Winters@dtaa.com Role: Senior MangerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Xavier K Rich UserID: XKR0971 Email: Xavier.K.Rich@dtaa.com Role: SecurityAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Yeo C Bennett UserID: YCB0005 Email: Yeo.C.Bennett@dtaa.com Role: EngineerAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+
+Nome: Zorita K Hopper UserID: ZKH0388 Email: Zorita.K.Hopper@dtaa.com Role: TechnicianAtividades Suspeitas - Listadas Abaixo
+{connect: 1 disconnect: 1 Logon: 1 Logoff: 0 Https: 0}Logon
+Connect
+Disconnect
+

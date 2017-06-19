@@ -74,4 +74,74 @@ public class Ano {
 		}
 		return -1;
 	}
+	/**
+	 * Método getMonthCounterConnect
+	 * @param month
+	 * @param day
+	 * @return meses.get(i).getDayCounterConnect(day) ou -1
+	 */
+	public int getMonthCounterConnect(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounterConnect(day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getMonthCounterDisconnect
+	 * @param month
+	 * @param day
+	 * @return meses.get(i).getDayCounterDisconnect(day)
+	 */
+	public int getMonthCounterDisconnect(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounterDisconnect(day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getMonthCounterLogon
+	 * @param month
+	 * @param day
+	 * @return meses.get(i).getDayCounterLogon(day) ou -1
+	 */
+	public int getMonthCounterLogon(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounterLogon(day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getMonthCounterLogoff
+	 * @param month
+	 * @param day
+	 * @return meses.get(i).getDayCounterLogoff(day) ou -1
+	 */
+	public int getMonthCounterLogoff(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounterLogoff(day);
+			}
+		}
+		return -1;
+	}
+	/**
+	 * Método getMonthCounterHttp
+	 * @param month
+	 * @param day
+	 * @return meses.get(i).getDayCounterHttp(day) ou -1
+	 */
+	public int getMonthCounterHttp(int month, int day){
+		for (int i = 0; i < meses.size(); i++) {
+			if(meses.get(i).getMes() == month){
+				return meses.get(i).getDayCounterHttp(day);
+			}
+		}
+		return -1;
+	}
 }

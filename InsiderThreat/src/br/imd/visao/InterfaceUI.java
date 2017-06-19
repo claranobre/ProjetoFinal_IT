@@ -187,7 +187,7 @@ public class InterfaceUI{
 			else if(event.getSource() == buscar){
 				buscar.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent e){
-						rl.buscaUsuario(respName);
+						//rl.buscaUsuario(respName);
 					}
 				});
 			}

@@ -13,7 +13,6 @@ public abstract class Atividade{
 	private int day, month, year;
 	private int hour, minute, second;
 	
-	private String dayInfo;
 	private String pc;
 
 	/**
@@ -34,19 +33,7 @@ public abstract class Atividade{
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
-		//String divisor = "/";
-		//String divisor2 = ":";
-		//String divisor3 = " ";
-				
-		//dayInfo = Integer.toString(day) + divisor + Integer.toString(month) + divisor + Integer.toString(year) + divisor3 
-			//	+ Integer.toString(hour) + divisor2 + Integer.toString(minute) + divisor2 + Integer.toString(second);  
-	}
-	/**
-	 * Método getDate 
-	 * @return dayInfo
-	 */
-	public String getDate(){
-		return dayInfo;
+ 
 	}
 	/**
 	 * Método getDay

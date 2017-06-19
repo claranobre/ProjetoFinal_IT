@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.imd.visao.GeradorHistograma;
+
 /**
  * 
  * @author Ana Clara e Felipe Gilberto
@@ -183,10 +185,11 @@ public class RespostaLog extends Usuario{
 	 * Método de busca do usuário para verificar se um usuário encontra-se na lista e para listar as atividades executadas por ele
 	 * @param respName
 	 */
-	public static void buscaUsuario(Label respName){
+	public static void buscaUsuario(String user, int year, int month, int day){
 		for(int i = 0; i < users.size(); i++){
-			if(users.get(i).getUser_ID().equals(respName)){
-				System.out.println("UserID : " + respName + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+			if(users.get(i).getUser_ID().equals(user)){
+				//System.out.println("UserID : " + respName + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+				users.get(i).histogramaImpresso(year, month, day);
 			}
 		}
 	}
