@@ -8,12 +8,8 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -24,6 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import br.imd.controle.RespostaLog;
 import br.imd.controle.Usuario;
 
 public class InterfaceUI{
@@ -38,14 +35,17 @@ public class InterfaceUI{
 
 	private TextField name;
 	private TextField id;
+	private TextField data;
 
 	private Label respName;
 	private Label respId;
+	private Label respData;
 
 	private Panel p1;
 	private Panel p2;
 	public Object suspeitos;
 	public ArrayList<Usuario> users;
+	public RespostaLog rl;
 
 	/**
 	 * Método Construtor
@@ -56,6 +56,7 @@ public class InterfaceUI{
 
 		this.name = new TextField(15);
 		this.id = new TextField(15);
+		this.data = new TextField(10);
 	}
 	/**
 	 * Método montaTela para chamar os métodos que compõe nossa interface
@@ -93,7 +94,7 @@ public class InterfaceUI{
 		 */
 		respName = new Label("Nome:");
 		respId = new Label("ID: ");
-
+		respData = new Label("Data: ");
 		buscar = new JButton("Buscar");	
 		painel.add(buscar);
 		listaUsuarios = new JButton("Usuários do Sistema");
@@ -114,7 +115,9 @@ public class InterfaceUI{
 		p1.add(name);
 		p1.add(respId);
 		p1.add(id);
-
+		p1.add(respData);
+		p1.add(data);
+		
 		p2.add(listaUsuarios);
 		p2.add(buscar);
 		p2.add(atividadesAnomalas);
@@ -133,7 +136,7 @@ public class InterfaceUI{
 		TextFieldHandler text = new TextFieldHandler();
 		name.addActionListener(text);
 		id.addActionListener(text);
-
+		data.addActionListener(text);
 	}
 
 	public void mostraJanela(){
@@ -144,8 +147,6 @@ public class InterfaceUI{
 
 	/**
 	 * Classe interna para tratamento dos botões
-	 * @author clara
-	 *
 	 */
 	public class ButtonHandler implements ActionListener{
 		/**
@@ -186,56 +187,19 @@ public class InterfaceUI{
 			else if(event.getSource() == buscar){
 				buscar.addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent e){
-						for(int i = 0; i < users.size(); i++){
-							Object user = null;
-							if(users.get(i).getUser_ID().equals(user)){
-								System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
-							}
-						}
+						rl.buscaUsuario(respName);
 					}
 				});
 			}
 			else if(event.getSource() == atividadesAnomalas){
-				ArrayList<Usuario> suspeitos = usuariosSuspeitos(2010, 01, 04);
-				File arquivoAtividades = new File("Dados/listaAtividades.txt");
-				BufferedWriter escrever = null;
-				try {
-					escrever = new BufferedWriter(new FileWriter(arquivoAtividades));
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-
-				for(int i = 0; i < suspeitos.size(); i++){
-					try {
-						escrever.write("Nome: " + suspeitos.get(i).getName() + " UserID: " + suspeitos.get(i).getUser_ID() + " Email: " + suspeitos.get(i).getEmail() + " Role: " + suspeitos.get(i).getRole());
-						escrever.write("Atividades Suspeitas - Listadas Abaixo");
-						escrever.newLine();
-						//escrever.write(suspeitos.get(i).imprimirDia(2010, 01, 04));
-						//escrever.write(suspeitos.get(i).imprimirAtividadesDia(2010, 01, 04));
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+				atividadesAnomalas.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						rl.usuariosSuspeitos(respData);
 					}
-					try {
-						escrever.flush();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					try {
-						escrever.close();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
+				});
 			}
 		}
-	}
-
-	private ArrayList<Usuario> usuariosSuspeitos(int i, int j, int k) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	private class TextFieldHandler implements ActionListener{

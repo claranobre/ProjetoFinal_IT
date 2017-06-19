@@ -172,21 +172,22 @@ public class Usuario{
 		return calendar.getYearCounter(year, month, day);
 	}
 	
-	public void imprimirAtividade(Atividade a){
+	public String imprimirAtividade(Atividade a){
 		if(a instanceof Device){
 			Device d = (Device) a;
-			System.out.println(d.getType());
+			return (String) d.getType();
 			
 		}
 		else if(a instanceof Https){
 			Https h = (Https) a;
-			System.out.println(h.getUrl());
+			return (String) h.getUrl();
 			
 		}
 		else if(a instanceof Login){
 			Login l = (Login) a;
-			System.out.println(l.getType());
+			return (String) l.getType();
 		}
+		return "";
 	}
 	
 	public void imprimirAtividades(){
@@ -195,16 +196,18 @@ public class Usuario{
 		}
 	}
 	
-	public void imprimirAtividadesDia(int ano, int mes, int dia){
+	public String imprimirAtividadesDia(int ano, int mes, int dia){
+		String string = "";
 		for(int i = 0; i < atividades.size(); i++){
 			Atividade a = atividades.get(i);
 			if(a.isFromDate(ano, mes, dia)){
-				imprimirAtividade(a);
+				string += imprimirAtividade(a) + "\n";
 			}
 		}
+		return string;
 	}
 	
-	public void imprimirDia(int ano, int mes, int dia){
-		System.out.println(calendar.getYearValors(ano, mes, dia));
+	public String imprimirDia(int ano, int mes, int dia){
+		return (String) calendar.getYearValors(ano, mes, dia);
 	}
 }

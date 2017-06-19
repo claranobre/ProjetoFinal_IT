@@ -1,7 +1,11 @@
 package br.imd.controle;
 
 import java.util.ArrayList;
-
+/**
+ * Classe Ano
+ * @author Ana Clara e Felipe Gilberto
+ *
+ */
 public class Ano {
 	private int ano;
 	private ArrayList<Mes> meses;

@@ -1,6 +1,11 @@
 package br.imd.controle;
 
+import java.awt.Label;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,7 +30,7 @@ public class RespostaLog extends Usuario{
 	 * ArrayList de usuários existentes no arquivo 'ldap.csv'
 	 */
 	static ArrayList<Usuario> users = new ArrayList<Usuario>();
-	
+
 	/**
 	 * caracteres especiais que precisamos ler das strings de cada coluna
 	 * e armazenar seus valores sem esses caracteres
@@ -36,8 +41,8 @@ public class RespostaLog extends Usuario{
 	String divisor3 = ":";
 	String divisor4 = "-";
 	String divisor5 = " ";
-	
-	
+
+
 	/**
 	 * Método respostaArquivoLogon irá retornar as Strings existentes no arquivo
 	 * 'logon-sumarizado.csv'
@@ -72,7 +77,7 @@ public class RespostaLog extends Usuario{
 		String line = "";
 		String divisor = ",";
 		String user, pc, id;
-				
+
 		while((line = leitor.readLine()) != null){
 			String[] device = line.split(divisor);
 			id = device[ID_DEVICE];
@@ -95,7 +100,7 @@ public class RespostaLog extends Usuario{
 		String line = "";
 		String divisor = ",";
 		String user, pc, id;
-				
+
 		while((line = leitor.readLine()) != null){
 			String[] http = line.split(divisor);
 			id = http[ID_HTTP];
@@ -117,7 +122,7 @@ public class RespostaLog extends Usuario{
 	public static void respostaArquivoLDAP(BufferedReader leitor) throws IOException{
 		String line = "";
 		String divisor = ",";
-		
+
 		while((line = leitor.readLine()) != null){
 			String[] ldap = line.split(divisor);
 			Usuario novo = new Usuario();
@@ -134,7 +139,7 @@ public class RespostaLog extends Usuario{
 		String divisor3 = ":";
 		String divisor5 = " ";
 		String days, horas;
-			
+
 		Scanner s = new Scanner(date).useDelimiter(divisor5);
 		days = s.next();
 		horas = s.next();
@@ -178,38 +183,77 @@ public class RespostaLog extends Usuario{
 	}
 	/**
 	 * Método de busca do usuário para verificar se um usuário encontra-se na lista e para listar as atividades executadas por ele
-	 * @param user
+	 * @param respName
 	 */
-	public static void buscaUsuario(String user){
+	public static void buscaUsuario(Label respName){
 		for(int i = 0; i < users.size(); i++){
-			if(users.get(i).getUser_ID().equals(user)){
-				System.out.println("UserID : " + user + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
+			if(users.get(i).getUser_ID().equals(respName)){
+				System.out.println("UserID : " + respName + " Nome: " + users.get(i).getName() + " Email: " + users.get(i).getEmail() + " Funcao: " + users.get(i).getRole());
 			}
 		}
 	}
-	
-	public static ArrayList<Usuario> usuariosSuspeitos(int year, int month, int day){
+
+	public static void usuariosSuspeitos(int year, int month, int day){
 		ArrayList<Usuario> suspeitos = new ArrayList<Usuario>();
 		double media_acessos = calculateMedia(year, month, day);
 		ArrayList<Usuario> usuarios_com_acesso = usuariosComAcesso(year, month, day);
 		double desvio_padrao = desvioPadraoDia(usuarios_com_acesso, media_acessos, year, month, day);
-		
+
 		for(int i = 0; i < usuarios_com_acesso.size(); i++){
 			double desvio_usuario = 0;
 			double acesso_usuario = (double) usuarios_com_acesso.get(i).getContadorDia(year, month, day);
 			double variancia = acesso_usuario - media_acessos;
 			desvio_usuario = Math.sqrt(Math.pow(variancia, 2));
-			
+
 			if(desvio_usuario > desvio_padrao){
 				suspeitos.add(usuarios_com_acesso.get(i));
 			}
 		}
-		return suspeitos;
+
+		try{
+
+			File arquivo = new File("Dados/usuariosSuspeitos.txt");
+			if(!arquivo.exists()){
+				arquivo.createNewFile();
+			}
+
+			FileWriter fw = new FileWriter(arquivo);
+			BufferedWriter bw = new BufferedWriter(fw);
+
+			for(int i = 0; i < suspeitos.size(); i++){
+				Usuario suspeito = suspeitos.get(i);
+
+
+				bw.write("Nome: " + suspeito.getName() + " UserID: " + suspeito.getUser_ID() + " Email: " + suspeito.getEmail() + " Role: " + suspeito.getRole());
+				bw.write("Atividades Suspeitas - Listadas Abaixo");
+				bw.newLine();
+
+				bw.write(suspeito.imprimirDia(2010, 01, 04));
+				bw.write(suspeito.imprimirAtividadesDia(2010, 01, 04));
+
+				bw.newLine();
+			}
+
+			bw.close();
+			fw.close();
+
+			FileReader fr = new FileReader(arquivo);
+			BufferedReader br = new BufferedReader(fr);
+
+			while(br.ready()){
+				String linha = br.readLine();
+			}
+			br.close();
+			fr.close();
+
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
 	}
-	
+
 	private static ArrayList<Usuario> usuariosComAcesso(int year, int month, int day){
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-		
+
 		for (int i = 0; i < users.size(); i++) {
 			if(users.get(i).getContadorDia(year, month, day) > 0){
 				usuarios.add(users.get(i));
@@ -217,7 +261,7 @@ public class RespostaLog extends Usuario{
 		}
 		return usuarios;
 	}
-	
+
 	private static double calculateMedia(int year, int month, int day){
 		int totalActivities = 0;
 		int usuariosOn = 0;
@@ -227,11 +271,11 @@ public class RespostaLog extends Usuario{
 				usuariosOn++;
 			}
 		}
-		
+
 		double media = totalActivities/(double) usuariosOn;
 		return media;
 	}
-	
+
 	private static double desvioPadraoDia (ArrayList<Usuario> usuarios, double media_acesso, int year, int month, int day){
 		double dp = 0;
 		for(int i = 0; i < usuarios.size(); i++){
@@ -241,5 +285,9 @@ public class RespostaLog extends Usuario{
 		}
 		dp /= usuarios.size();
 		return Math.sqrt(dp);
+	}
+	public void usuariosSuspeitos(Label respData) {
+		// TODO Auto-generated method stub
+		
 	}
 }

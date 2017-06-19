@@ -1,7 +1,5 @@
 package br.imd.visao;
 
-import br.imd.controle.*;
-
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
