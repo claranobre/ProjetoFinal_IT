@@ -8,7 +8,7 @@ public class Tree{
 	private Tree rightTree;
 	private Tree maiorFilho;
 	/**
-	 * atributos para criacao da interface gráfica da Arvore Binaria de Busca
+	 * Atributos para criacao da interface gráfica da Arvore Binaria de Busca
 	 */
 	private int height;
 	private int posX;

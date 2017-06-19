@@ -1,11 +1,18 @@
 package br.imd.controle;
 
 import java.util.ArrayList;
-
+/**
+ * Classe Mes
+ * @author Ana Clara e Felipe Gilberto
+ *
+ */
 public class Mes {
 	private int mes;
 	private ArrayList<Dia> dias;
-	
+	/**
+	 * Método Construtor
+	 * @param mes
+	 */
 	public Mes(int mes){
 		dias = new ArrayList<Dia>();
 		this.mes = mes;
@@ -13,14 +20,24 @@ public class Mes {
 			dias.add(new Dia(i));
 		}
 	}
-	
+	/**
+	 * Método getMes
+	 * @return mes
+	 */
 	public int getMes() {
 		return mes;
 	}
+	/**
+	 * Método setMes
+	 * @param mes
+	 */
 	public void setMes(int mes) {
 		this.mes = mes;
 	}
-	
+	/**
+	 * Método newActivity
+	 * @param activity
+	 */
 	public void newActivity(Atividade activity){
 		for (int i = 0; i < dias.size(); i++) {
 			if(dias.get(i).getDia() == activity.getDay()){
@@ -29,7 +46,11 @@ public class Mes {
 			}
 		}
 	}
-	
+	/**
+	 * Método getDayValors
+	 * @param day
+	 * @return dias.get(i).getValores()
+	 */
 	public String getDayValors(int day){
 		for (int i = 0; i < dias.size(); i++) {
 			if(dias.get(i).getDia() == day){
@@ -38,7 +59,11 @@ public class Mes {
 		}
 		return "";
 	}
-	
+	/**
+	 * Método getDayCounter
+	 * @param day
+	 * @return dias.get(i).getCounterActivity()
+	 */
 	public int getDayCounter(int day){
 		for (int i = 0; i < dias.size(); i++) {
 			if(dias.get(i).getDia() == day){

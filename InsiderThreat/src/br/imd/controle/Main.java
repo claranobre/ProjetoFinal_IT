@@ -1,11 +1,9 @@
 package br.imd.controle;
 
-import java.util.ArrayList;
-
 import br.imd.visao.InterfaceUI;
 
 /**
- * Método principal sem interface gráfica
+ * Classe Principal com Interface Gráfica
  */
 
 public class Main extends LeituraLog{

@@ -16,10 +16,17 @@ public class Usuario{
 	private Calendario calendar;
 	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 
+	/**
+	 * Método Construtor
+	 */
 	public Usuario(){
 		calendar = new Calendario();
 	}
-	
+	/**
+	 * Método diaCorrente
+	 * @param month
+	 * @param day
+	 */
 	public void diaCorrente(int month, int day){
 	}
 	/**
@@ -165,13 +172,19 @@ public class Usuario{
 		calendar.newActivity(http);
 	}
 	/**
-	 * Método imprimirAtividades imprime as atividades executadas pelo usuário buscado
-	 * @return void
+	 * Método getContadorDia
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return calendar.getYearCounter(year, month, day)
 	 */
 	public int getContadorDia(int year, int month, int day){
 		return calendar.getYearCounter(year, month, day);
 	}
-	
+	/**
+	 * Método imprimirAtividades imprime as atividades executadas pelo usuário buscado
+	 * @return void
+	 */	
 	public String imprimirAtividade(Atividade a){
 		if(a instanceof Device){
 			Device d = (Device) a;
@@ -189,13 +202,21 @@ public class Usuario{
 		}
 		return "";
 	}
-	
+	/**
+	 * Método imprimirAtividades
+	 */
 	public void imprimirAtividades(){
 		for (int i = 0; i < atividades.size(); i++){
 			imprimirAtividade(atividades.get(i));
 		}
 	}
-	
+	/**
+	 * Método imprimirAtividadesDia
+	 * @param ano
+	 * @param mes
+	 * @param dia
+	 * @return string
+	 */
 	public String imprimirAtividadesDia(int ano, int mes, int dia){
 		String string = "";
 		for(int i = 0; i < atividades.size(); i++){
@@ -206,7 +227,13 @@ public class Usuario{
 		}
 		return string;
 	}
-	
+	/**
+	 * Método imprimirDia
+	 * @param ano
+	 * @param mes
+	 * @param dia
+	 * @return (String) calendar.getYearValors(ano, mes, dia)
+	 */
 	public String imprimirDia(int ano, int mes, int dia){
 		return (String) calendar.getYearValors(ano, mes, dia);
 	}

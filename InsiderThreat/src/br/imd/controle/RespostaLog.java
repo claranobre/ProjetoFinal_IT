@@ -8,9 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
-import java.math.*;
 
 /**
  * 
@@ -192,7 +190,12 @@ public class RespostaLog extends Usuario{
 			}
 		}
 	}
-
+	/**
+	 * Método usuariosSuspeitos para análise do perfil dos usuários e salvar as atividades anômalas em um arquivo
+	 * @param year
+	 * @param month
+	 * @param day
+	 */
 	public static void usuariosSuspeitos(int year, int month, int day){
 		ArrayList<Usuario> suspeitos = new ArrayList<Usuario>();
 		double media_acessos = calculateMedia(year, month, day);
@@ -250,7 +253,13 @@ public class RespostaLog extends Usuario{
 			ex.printStackTrace();
 		}
 	}
-
+	/**
+	 * Método usuariosComAcesso
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return usuarios
+	 */
 	private static ArrayList<Usuario> usuariosComAcesso(int year, int month, int day){
 		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 
@@ -261,7 +270,13 @@ public class RespostaLog extends Usuario{
 		}
 		return usuarios;
 	}
-
+	/**
+	 * Método calculateMedia
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return media
+	 */
 	private static double calculateMedia(int year, int month, int day){
 		int totalActivities = 0;
 		int usuariosOn = 0;
@@ -275,7 +290,15 @@ public class RespostaLog extends Usuario{
 		double media = totalActivities/(double) usuariosOn;
 		return media;
 	}
-
+	/**
+	 * Método desvioPadraoDia
+	 * @param usuarios
+	 * @param media_acesso
+	 * @param year
+	 * @param month
+	 * @param day
+	 * @return Math.sqrt(dp);
+	 */
 	private static double desvioPadraoDia (ArrayList<Usuario> usuarios, double media_acesso, int year, int month, int day){
 		double dp = 0;
 		for(int i = 0; i < usuarios.size(); i++){
@@ -286,6 +309,10 @@ public class RespostaLog extends Usuario{
 		dp /= usuarios.size();
 		return Math.sqrt(dp);
 	}
+	/**
+	 * Método usuariosSuspeitos
+	 * @param respData
+	 */
 	public void usuariosSuspeitos(Label respData) {
 		// TODO Auto-generated method stub
 		
